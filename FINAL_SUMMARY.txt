@@ -1,0 +1,97 @@
+================================================================
+6j SYMBOL CONFIGURATION ANALYSIS - COMPLETE
+================================================================
+
+IMPLEMENTATION: SDcount_v2.py
+- Simplified, intuitive code (~470 lines)
+- Original visualization layout (vertices spread out, not blocked)
+- Clear section organization
+- Combined analysis in single pass
+
+================================================================
+RESULTS
+================================================================
+
+TOTAL VALID CONFIGURATIONS: 693
+
+By cycles removed:
+  0 cycles: 480 configs (69.3%)
+  1 cycle:  188 configs (27.1%)
+  2 cycles:  24 configs ( 3.5%)
+  3 cycles:   1 config  ( 0.1%)
+
+================================================================
+SPECIAL CASE: All t's → same type (a, b, or c)
+================================================================
+
+Total: 30 configurations (4.3% of all valid)
+
+Cycle distribution:
+  0 cycles: 24 configs (80.0%)
+  1 cycle:   6 configs (20.0%)
+  2 cycles:  0 configs
+  3 cycles:  0 configs
+
+KEY INSIGHT: These special configurations have simpler structure
+and NEVER require removing 2 or 3 cycles!
+
+================================================================
+GENERATED VISUALIZATIONS
+================================================================
+
+1. cycle_examples/ (31 images)
+   
+   1cycle_*.png (6 files):
+   - Special cases where all t's connect to same type
+   - The ONLY 1-cycle cases in this special category
+   - Shows simpler graph structure
+   
+   2cycles_*.png (24 files):
+   - All configurations with 2 cycles removed
+   - Various edge overlap patterns
+   - Parallel edges form 2-cycles
+   
+   3cycles_*.png (1 file):
+   - Unique maximum-cycle configuration
+   - All 3 FIXED intermediate edges overlap with RHS
+   - Highest symmetry case
+
+2. t_same_type_all/ (30 images)
+   - Complete reference: all cases where t's → same type
+   - Includes both 0-cycle (24) and 1-cycle (6) cases
+
+================================================================
+VISUALIZATION FEATURES
+================================================================
+
+✓ Original layout: vertices spread across canvas
+  - S vertices (s1, s2, s3): left side (light blue)
+  - T vertices (t1, t2, t3): right side (purple)
+  - A vertices (a1, a2, a3): upper middle (light green)
+  - B vertices (b1, b2, b3): center (light yellow)
+  - C vertices (c1, c2, c3): lower middle (light coral)
+
+✓ Cycle highlighting:
+  - Red: Cycle 1
+  - Orange: Cycle 2
+  - Purple: Cycle 3
+  
+✓ Parallel edges drawn as curves
+
+✓ Cycle labels on parallel edges
+
+✓ Info box with cycle details
+
+================================================================
+CODE IMPROVEMENTS
+================================================================
+
+✓ Cleaner organization (section headers)
+✓ Intuitive function names
+✓ Single-pass data collection
+✓ Automatic filtering of special cases
+✓ All 1-cycle special cases drawn to cycle_examples/
+✓ Original visualization style preserved
+✓ Better documentation
+
+================================================================

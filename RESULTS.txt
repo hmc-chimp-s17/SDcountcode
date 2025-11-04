@@ -1,0 +1,58 @@
+================================================================
+6j SYMBOL CONFIGURATION ANALYSIS - RESULTS SUMMARY
+================================================================
+
+OVERALL STATISTICS
+------------------
+Total valid configurations: 693
+
+Breakdown by cycles removed:
+  0 cycles: 480 configs (69.3%)
+  1 cycle:  188 configs (27.1%)
+  2 cycles:  24 configs ( 3.5%)
+  3 cycles:   1 config  ( 0.1%)
+
+================================================================
+SPECIAL CASE: All t vertices connect to same type (a, b, or c)
+================================================================
+
+Total: 30 configurations (4.3% of all valid configs)
+
+Cycle breakdown for these 30 special cases:
+  0 cycles: 24 configs (80.0%)
+  1 cycle:   6 configs (20.0%)
+
+KEY FINDING: When all t vertices connect to the same intermediate
+type, the graph structure is simpler - no cases with 2 or 3 cycles!
+
+================================================================
+FILES GENERATED
+================================================================
+
+1. SDcount_v2.py - Simplified, clean implementation (~447 lines)
+   - Clear section headers
+   - Intuitive function names
+   - Combined analysis for t-connection cases
+   
+2. cycle_examples/ - Examples with 2 or 3 cycles
+   - 24 examples with 2 cycles removed
+   - 1 example with 3 cycles removed
+   
+3. t_same_type_all/ - All 30 special cases (NEW)
+   - All configurations where t1,t2,t3 connect to same type
+   - Shows cycle count in title
+   - ex1.png through ex30.png
+
+================================================================
+CODE IMPROVEMENTS
+================================================================
+
+SDcount_v2.py is more intuitive than SDcount.py:
+  ✓ Clearer variable names (build_adj, check_degrees)
+  ✓ Better organized (clear sections with headers)
+  ✓ Simplified logic (removed redundant functions)
+  ✓ Combined t-connection analysis (no separate loops)
+  ✓ Single folder for all t-same-type examples
+  ✓ More concise output format
+
+================================================================

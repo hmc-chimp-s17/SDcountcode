@@ -1,0 +1,82 @@
+================================================================
+FINAL RESULTS: 6j SYMBOL CONFIGURATION ANALYSIS
+================================================================
+
+TOTAL VALID CONFIGURATIONS: 693
+
+Breakdown by cycles removed:
+  0 cycles: 480 configs (69.3%)
+  1 cycle:  188 configs (27.1%)
+  2 cycles:  24 configs ( 3.5%)
+  3 cycles:   1 config  ( 0.1%)
+
+================================================================
+SPECIAL CASE: All t's connect to same type (a, b, or c)
+================================================================
+
+Total: 30 configurations (4.3% of all valid)
+
+Cycle distribution for these special cases:
+  0 cycles: 24 configs (80.0%)
+  1 cycle:   6 configs (20.0%)
+  2 cycles:  0 configs (0%)
+  3 cycles:  0 configs (0%)
+
+KEY INSIGHT: When all t vertices connect to the same intermediate
+vertex type, the resulting graphs are structurally simpler and
+never require removing 2 or 3 cycles!
+
+================================================================
+FILES GENERATED
+================================================================
+
+1. SDcount_v2.py
+   - Simplified, intuitive implementation (~457 lines)
+   - Clear section organization
+   - Combined analysis in single pass
+   - Better function naming
+
+2. cycle_examples/ (31 images total)
+   - 6 examples with 1 cycle (all special cases where t's → same type)
+   - 24 examples with 2 cycles
+   - 1 example with 3 cycles
+   
+3. t_same_type_all/ (30 images)
+   - All configurations where t1,t2,t3 connect to same type
+   - Includes both 0-cycle (24) and 1-cycle (6) cases
+   - Complete reference collection
+
+================================================================
+CYCLE EXAMPLES BREAKDOWN
+================================================================
+
+cycle_examples/ contains all cases with 1, 2, or 3 cycles:
+
+1cycle_*.png (6 files):
+  - Special cases where all t's connect to same type (a, b, or c)
+  - These are the ONLY 1-cycle cases in this category
+  - Show simpler structure compared to general cases
+
+2cycles_*.png (24 files):
+  - All configurations requiring 2 cycle removals
+  - Mix of various edge overlap patterns
+  - Parallel edges highlighted in different colors
+
+3cycles_*.png (1 file):
+  - Unique configuration with maximum cycles
+  - All 3 FIXED intermediate edges overlap with RHS
+  - Highest symmetry case
+
+================================================================
+CODE IMPROVEMENTS IN SDcount_v2.py
+================================================================
+
+✓ Cleaner organization with section headers
+✓ Intuitive function names (build_adj, check_degrees, all_t_same_type)
+✓ Single-pass analysis (collects all statistics at once)
+✓ Automatic filtering of special cases
+✓ Draws 1-cycle special cases to cycle_examples/ folder
+✓ More concise output formatting
+✓ Better documentation
+
+================================================================

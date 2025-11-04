@@ -306,6 +306,41 @@ def draw_graph_with_cycles(edges, cycles, title, filename):
     plt.close()
 
 
+def check_t_connections(rhs):
+    """
+    Check if all t1, t2, t3 connect to same intermediate vertex type.
+    Returns: 'a' if all connect to a1/a2/a3, 'b' if all to b1/b2/b3,
+             'c' if all to c1/c2/c3, or None otherwise.
+    """
+    t_connections = {}
+    for e in rhs:
+        u, v = e
+        # Check if one end is a t vertex
+        if u[0] == 't':
+            t_vertex = u
+            other_vertex = v
+        elif v[0] == 't':
+            t_vertex = v
+            other_vertex = u
+        else:
+            continue
+
+        # Record what intermediate vertex type this t connects to
+        if other_vertex[0] in ['a', 'b', 'c']:
+            t_connections[t_vertex] = other_vertex[0]
+
+    # Check if we have all three t vertices
+    if len(t_connections) != 3:
+        return None
+
+    # Check if all connect to the same type
+    connection_types = set(t_connections.values())
+    if len(connection_types) == 1:
+        return connection_types.pop()
+
+    return None
+
+
 def count_valid_configurations():
     """Count all valid configurations."""
     print("Generating all RHS matchings...")
@@ -313,6 +348,7 @@ def count_valid_configurations():
     print(f"Total RHS matchings: {len(all_rhs)}")
 
     cycle_stats = defaultdict(list)
+    t_connection_stats = {'a': [], 'b': [], 'c': []}
 
     for idx, rhs in enumerate(all_rhs):
         if (idx + 1) % 1000 == 0:
@@ -329,7 +365,12 @@ def count_valid_configurations():
             all_cycles = get_all_cycles(combined)
             cycle_stats[num_cycles].append((rhs, combined, after, all_cycles))
 
-    return cycle_stats
+            # Check t connections
+            t_type = check_t_connections(rhs)
+            if t_type:
+                t_connection_stats[t_type].append((rhs, combined, after, all_cycles))
+
+    return cycle_stats, t_connection_stats
 
 
 if __name__ == "__main__":
@@ -337,7 +378,7 @@ if __name__ == "__main__":
     print("6j Symbol Configuration Counter")
     print("="*60)
 
-    cycle_stats = count_valid_configurations()
+    cycle_stats, t_connection_stats = count_valid_configurations()
 
     total = sum(len(v) for v in cycle_stats.values())
 
@@ -349,6 +390,13 @@ if __name__ == "__main__":
     print("\nCycle removal statistics:")
     for num in sorted(cycle_stats.keys()):
         print(f"  {num} cycle(s) removed: {len(cycle_stats[num])} configurations")
+
+    print("\nT-connection statistics (all t vertices connect to same type):")
+    for vertex_type in ['a', 'b', 'c']:
+        count = len(t_connection_stats[vertex_type])
+        print(f"  All t's → {vertex_type}: {count} configurations")
+    total_same_type = sum(len(v) for v in t_connection_stats.values())
+    print(f"  Total with same-type connections: {total_same_type}")
 
     # Draw examples
     print("\nDrawing examples...")
@@ -374,7 +422,21 @@ if __name__ == "__main__":
             filename = os.path.join(output_dir, f"3cycles_ex{i+1}.png")
             draw_graph_with_cycles(combined, all_cycles, title, filename)
 
-    print(f"\nAll drawings saved to {output_dir}/")
+    # Draw examples of t-connections to same type
+    t_dir = "t_connection_examples"
+    os.makedirs(t_dir, exist_ok=True)
+    print(f"\nCreating directory for t-connection examples: {t_dir}/")
+
+    for vertex_type in ['a', 'b', 'c']:
+        configs = t_connection_stats[vertex_type]
+        if configs:
+            print(f"Drawing all {len(configs)} examples where all t's → {vertex_type}:")
+            for i, (rhs, combined, final, all_cycles) in enumerate(configs):
+                title = f"All t's → {vertex_type} (Example {i+1}/{len(configs)})"
+                filename = os.path.join(t_dir, f"t_to_{vertex_type}_ex{i+1}.png")
+                draw_graph_with_cycles(combined, all_cycles, title, filename)
+
+    print(f"\nAll drawings saved to {output_dir}/ and {t_dir}/")
 
     # Show text examples
     print("\nExamples (prioritized by cycle count):")
