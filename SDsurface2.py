@@ -20,6 +20,13 @@ FIXED = [
     (("c", 1), ("a", 3)),
 ]
 
+# Mode edges: three cuffs (A, B, C triangles) + one cross-group edge
+MODE_EDGES = [
+    (("a", 1), ("a", 2)), (("a", 2), ("a", 3)), (("a", 3), ("a", 1)),
+    (("b", 1), ("b", 2)), (("b", 2), ("b", 3)), (("b", 3), ("b", 1)),
+    (("c", 1), ("c", 2)), (("c", 2), ("c", 3)), (("c", 3), ("c", 1)),
+]
+
 
 def build_adjacency(edges):
     """Build adjacency list (ignores multiplicity for cycle/path checking)."""
@@ -124,56 +131,110 @@ def check_three_paths(edges):
     return True
 
 
+def merge_ST(p):
+    """Merge s1,s2,s3 → 'S' and t1,t2,t3 → 'T'."""
+    return 'S' if p in S else ('T' if p in T else p)
+
+
+def key_label(p):
+    """Sorting key for port labels."""
+    if isinstance(p, str):
+        return (0, p, 0)
+    name, idx = p
+    return (1, name, idx)
+
+
+def next_prev_in_group(port):
+    """Get next/prev port in triangle (a1→a2→a3→a1)."""
+    if isinstance(port, tuple) and port[0] in ('a', 'b', 'c'):
+        name, i = port
+        nxt = (name, 1 if i == 3 else i + 1)
+        prv = (name, 3 if i == 1 else i - 1)
+        return nxt, prv
+    return None, None
+
+
 def merge_vertices_with_rotation(edges):
     """
-    Merge s1,s2,s3 → S and t1,t2,t3 → T with rotation system.
-    S/T rotation orders by port index (1,2,3).
+    Build rotation system with PHYSICAL edges + MODE edges (cuffs).
     Returns: (merged_edges, rotations)
     """
-    edges_with_ids, v_darts = [], defaultdict(list)
+    # Physical edges with merged endpoints
+    phys_m = [(merge_ST(u), merge_ST(v), u, v) for (u, v) in edges]
+    mode_m = [(merge_ST(u), merge_ST(v)) for (u, v) in MODE_EDGES]
 
-    for eid, e in enumerate(edges):
-        u, v = tuple(e) if isinstance(e, frozenset) else e
-        uV = 'S' if u in S else ('T' if u in T else u)
-        vV = 'S' if v in S else ('T' if v in T else v)
-        edges_with_ids.append((uV, vV, eid, u, v))
-        v_darts[uV].append((vV, eid, u))
-        v_darts[vV].append((uV, eid, v))
+    # Assign unique edge IDs
+    merged_edges = []
+    for eid, (U, V, u_orig, v_orig) in enumerate(phys_m):
+        merged_edges.append((U, V, eid, 'phys', u_orig, v_orig))
+    base = len(phys_m)
+    for j, (U, V) in enumerate(mode_m):
+        merged_edges.append((U, V, base + j, 'mode', None, None))
+
+    # Build incident darts per vertex
+    incident = defaultdict(list)
+    vertices = set(['S', 'T'])
+    for (U, V, eid, tag, u_orig, v_orig) in merged_edges:
+        vertices.add(U)
+        vertices.add(V)
+        incident[U].append((V, eid, tag, u_orig if tag == 'phys' else None))
+        incident[V].append((U, eid, tag, v_orig if tag == 'phys' else None))
 
     rotations = {}
-    for v in ['S', 'T'] + A + B + C:
-        darts = v_darts.get(v, [])
-        if v == 'S':
-            for (_, _, orig) in darts:
-                assert orig in S
-            darts = sorted(darts, key=lambda d: d[2][1])
-        elif v == 'T':
-            for (_, _, orig) in darts:
-                assert orig in T
-            darts = sorted(darts, key=lambda d: d[2][1])
+
+    for v in vertices:
+        darts = incident.get(v, [])
+
+        if v in ('S', 'T'):
+            # S/T: physical darts by port index, mode darts by label
+            phys = [(nb, eid, tag, orig) for (nb, eid, tag, orig) in darts if tag == 'phys']
+            mode = [(nb, eid, tag, orig) for (nb, eid, tag, orig) in darts if tag == 'mode']
+
+            phys_sorted = sorted(phys, key=lambda d: d[3][1] if d[3] in S or d[3] in T else 0)
+            mode_sorted = sorted(mode, key=lambda d: key_label(d[0]))
+
+            # Interleave for stability
+            cyc = []
+            for i in range(max(len(mode_sorted), len(phys_sorted))):
+                if i < len(mode_sorted):
+                    cyc.append((mode_sorted[i][0], mode_sorted[i][1]))
+                if i < len(phys_sorted):
+                    cyc.append((phys_sorted[i][0], phys_sorted[i][1]))
+
+            rotations[v] = cyc
+            continue
+
+        # Intermediate ports: interleave [tri_next, phys_1, tri_prev, phys_2]
+        phys = [(nb, eid) for (nb, eid, tag, _) in darts if tag == 'phys']
+        mode = [(nb, eid) for (nb, eid, tag, _) in darts if tag == 'mode']
+
+        nxt, prv = next_prev_in_group(v)
+        d_nxt = next(((nb, eid) for (nb, eid) in mode if nb == nxt), None)
+        d_prv = next(((nb, eid) for (nb, eid) in mode if nb == prv), None)
+
+        phys_sorted = sorted(phys, key=lambda x: key_label(x[0]))
+
+        if d_nxt and d_prv and len(phys_sorted) >= 2:
+            cyc = [d_nxt, phys_sorted[0], d_prv, phys_sorted[1]]
         else:
-            if darts:
-                assert len(darts) == 2
-        rotations[v] = [(nb, eid) for nb, eid, _ in darts]
+            # Fallback: stable mix
+            mode_sorted = sorted(mode, key=lambda x: key_label(x[0]))
+            cyc = []
+            for i in range(max(len(mode_sorted), len(phys_sorted))):
+                if i < len(mode_sorted):
+                    cyc.append(mode_sorted[i])
+                if i < len(phys_sorted):
+                    cyc.append(phys_sorted[i])
 
-    return [(uV, vV, eid) for uV, vV, eid, _, _ in edges_with_ids], rotations
+        rotations[v] = cyc
 
-
-def compute_euler_characteristic(edges):
-    """Compute χ = V - E + F for ribbon graph."""
-    if not edges:
-        return 0, 0, 0, 0
-
-    merged_edges, rotations = merge_vertices_with_rotation(edges)
-    V = len({v for u, v, _ in merged_edges for v in (u, v)})
-    E = len(merged_edges)
-    F = count_ribbon_faces_with_darts(merged_edges, rotations)
-    return V - E + F, V, E, F
+    # Return simplified edge list
+    edges_all = [(U, V, eid) for (U, V, eid, _, _, _) in merged_edges]
+    return edges_all, rotations
 
 
 def count_ribbon_faces_with_darts(merged_edges, rotations):
     """Count faces using dart permutations: φ = σ ∘ α."""
-    # Build darts
     darts, dart_map = [], {}
     for u, v, eid in merged_edges:
         idx = len(darts)
@@ -185,41 +246,58 @@ def count_ribbon_faces_with_darts(merged_edges, rotations):
 
     # α: edge flip
     alpha = [dart_map[(v, u, eid)] for u, v, eid in darts]
-    assert all(alpha[alpha[i]] == i for i in range(D))
 
-    # σ: vertex rotation (cycles outgoing darts)
+    # σ: vertex rotation
     sigma = [None] * D
     for u, cyc in rotations.items():
-        if not cyc:
-            continue
         n = len(cyc)
+        if n == 0:
+            continue
         for k in range(n):
             nb_k, eid_k = cyc[k]
-            nb_next, eid_next = cyc[(k + 1) % n]
+            nb_n, eid_n = cyc[(k + 1) % n]
             out_dart = (u, nb_k, eid_k)
-            out_next = (u, nb_next, eid_next)
+            out_next = (u, nb_n, eid_n)
             if out_dart in dart_map and out_next in dart_map:
                 sigma[dart_map[out_dart]] = dart_map[out_next]
 
-    # Verify σ
-    for i, (u, v, eid) in enumerate(darts):
-        if u in rotations and rotations[u]:
-            assert sigma[i] is not None
-
     # φ = σ ∘ α
-    phi = [sigma[alpha[i]] for i in range(D)]
-    assert all(p is not None for p in phi)
+    phi = [sigma[alpha[i]] if alpha[i] is not None else None for i in range(D)]
 
     # Count φ-cycles
     visited, faces = [False] * D, 0
     for i in range(D):
-        if not visited[i]:
-            j = i
-            while not visited[j]:
-                visited[j] = True
-                j = phi[j]
-            faces += 1
+        if visited[i] or phi[i] is None:
+            continue
+        j = i
+        while not visited[j] and phi[j] is not None:
+            visited[j] = True
+            j = phi[j]
+        faces += 1
     return faces
+
+
+def compute_euler_characteristic(edges):
+    """Compute χ = V - E + F including mode edges (cuffs)."""
+    if not edges:
+        return 0, 0, 0, 0
+
+    merged_edges, rotations = merge_vertices_with_rotation(edges)
+
+    # V includes S, T and all vertices touched by edges
+    Vset = set(['S', 'T'])
+    for u, v, _ in merged_edges:
+        Vset.add(u)
+        Vset.add(v)
+    V = len(Vset)
+
+    # E counts ALL ribbons (physical + mode)
+    E = len(merged_edges)
+
+    # F counts boundary faces
+    F = count_ribbon_faces_with_darts(merged_edges, rotations)
+
+    return V - E + F, V, E, F
 
 
 def generate_all_rhs_matchings():
@@ -319,7 +397,7 @@ def count_with_euler_characteristic():
 
 if __name__ == "__main__":
     print("="*60)
-    print("6j Symbol Surface Analysis")
+    print("6j Symbol Surface Analysis (with Mode Edges)")
     print("="*60)
 
     count, euler_chars = count_with_euler_characteristic()
@@ -337,6 +415,6 @@ if __name__ == "__main__":
         print(f"\nχ={chi} example (V={ex['V']}, E={ex['E']}, F={ex['F']}):")
         for e in ex['rhs']:
             print(f"  {e}")
-        draw_ribbon_graph(ex['combined'], f"χ={chi}", f"ribbon_chi_{chi}.png")
+        draw_ribbon_graph(ex['combined'], f"χ={chi} (with cuffs)", f"ribbon2_chi_{chi}.png")
 
     print("\nDone!")

@@ -1,20 +1,17 @@
 from collections import defaultdict
-from itertools import combinations
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
+import numpy as np
 
-# ---- Define all ports ----
-# Each vertex has 3 ports
-S = [("s", i) for i in (1, 2, 3)]  # Input ports
-T = [("t", i) for i in (1, 2, 3)]  # Output ports
-A = [("a", i) for i in (1, 2, 3)]  # Intermediate ports
-B = [("b", i) for i in (1, 2, 3)]  # Intermediate ports
-C = [("c", i) for i in (1, 2, 3)]  # Intermediate ports
+# Define ports
+S = [("s", i) for i in (1, 2, 3)]
+T = [("t", i) for i in (1, 2, 3)]
+A = [("a", i) for i in (1, 2, 3)]
+B = [("b", i) for i in (1, 2, 3)]
+C = [("c", i) for i in (1, 2, 3)]
 
-# All ports that can be on the RHS (everything except S)
-RHS_PORTS = T + A + B + C  # 12 ports total
+RHS_PORTS = T + A + B + C
 
-# ---- Fixed LHS edges ----
+# Fixed LHS edges
 FIXED = [
     (("s", 1), ("a", 1)),
     (("s", 2), ("b", 2)),
@@ -25,434 +22,373 @@ FIXED = [
 ]
 
 
-# ---- Helper function: build adjacency list ----
 def build_adjacency(edges):
-    """Build adjacency list from list of edges."""
+    """Build adjacency list (ignores parallel edges)."""
     adj = defaultdict(set)
-    for edge in edges:
-        if isinstance(edge, frozenset):
-            u, v = tuple(edge)
-        else:
-            u, v = edge
+    for e in edges:
+        u, v = tuple(e) if isinstance(e, frozenset) else e
         adj[u].add(v)
         adj[v].add(u)
     return adj
 
 
-# ---- Check port degrees (valency) ----
 def check_port_degrees(edges):
-    """
-    Check that each port has the correct degree:
-    - S ports (input): exactly 1 edge
-    - T ports (output): exactly 1 edge
-    - A, B, C ports (intermediate): exactly 2 edges
-    """
-    adj = build_adjacency(edges)
+    """Check S/T have degree 1, A/B/C have degree 2 (counting parallel edges)."""
+    adj = defaultdict(list)
+    for e in edges:
+        u, v = tuple(e) if isinstance(e, frozenset) else e
+        adj[u].append(v)
+        adj[v].append(u)
 
-    # Check S ports: degree 1
-    for port in S:
+    for port in S + T:
         if len(adj[port]) != 1:
             return False
-
-    # Check T ports: degree 1
-    for port in T:
-        if len(adj[port]) != 1:
-            return False
-
-    # Check A, B, C ports: degree 2
     for port in A + B + C:
         if len(adj[port]) != 2:
             return False
-
     return True
 
 
-# ---- Find a cycle in the graph ----
 def find_cycle(edges):
-    """Find any cycle in the graph. Returns list of edges in the cycle, or empty list."""
+    """Find any cycle, including 2-cycles from parallel edges."""
+    # Check for parallel edges first
+    edge_counts = defaultdict(int)
+    for e in edges:
+        u, v = tuple(e) if isinstance(e, frozenset) else e
+        edge_counts[frozenset([u, v])] += 1
+
+    for key, count in edge_counts.items():
+        if count >= 2:
+            u, v = tuple(key)
+            return [(u, v), (v, u)]
+
+    # Find regular cycles using DFS
     adj = build_adjacency(edges)
-    visited = set()
-    parent = {}
+    visited, parent = set(), {}
 
     def dfs(node, par):
-        """DFS to find cycle. Returns cycle edges if found, else None."""
         visited.add(node)
-        for neighbor in adj[node]:
-            if neighbor == par:  # Skip edge back to parent
+        for nb in adj[node]:
+            if nb == par:
                 continue
-            if neighbor in visited:
-                # Found a cycle! Reconstruct it
-                cycle = []
-                current = node
-                while current != neighbor:
-                    cycle.append((current, parent[current]))
-                    current = parent[current]
-                cycle.append((neighbor, node))
-                return cycle
-            else:
-                parent[neighbor] = node
-                result = dfs(neighbor, node)
-                if result:
-                    return result
+            if nb in visited:
+                cyc = []
+                cur = node
+                while cur != nb:
+                    cyc.append((cur, parent[cur]))
+                    cur = parent[cur]
+                cyc.append((nb, node))
+                return cyc
+            parent[nb] = node
+            res = dfs(nb, node)
+            if res:
+                return res
         return None
 
-    # Try starting from each unvisited node
-    for start_node in adj:
-        if start_node not in visited:
-            parent[start_node] = None
-            cycle = dfs(start_node, None)
-            if cycle:
-                return cycle
-
+    for s in adj:
+        if s not in visited:
+            parent[s] = None
+            cyc = dfs(s, None)
+            if cyc:
+                return cyc
     return []
 
 
-# ---- Remove all cycles ----
 def remove_all_cycles(edges):
-    """Remove all cycles by repeatedly finding and deleting one cycle."""
-    # Convert all edges to frozensets for consistency
-    edge_list = [frozenset(e) if not isinstance(e, frozenset) else e for e in edges]
+    """Remove all cycles. Returns (remaining_edges, num_cycles_removed)."""
+    E = [frozenset(e) if not isinstance(e, frozenset) else e for e in edges]
+    num_cycles = 0
 
     while True:
-        cycle = find_cycle(edge_list)
-        if not cycle:
-            break  # No more cycles
+        cyc = find_cycle(E)
+        if not cyc:
+            break
+        E = [e for e in E if frozenset(e) not in {frozenset(c) for c in cyc}]
+        num_cycles += 1
 
-        # Remove the edges in this cycle
-        cycle_set = {frozenset(e) for e in cycle}
-        edge_list = [e for e in edge_list if e not in cycle_set]
-
-    return edge_list
+    return E, num_cycles
 
 
-# ---- Check if graph forms exactly 3 disconnected paths from S to T ----
 def check_three_paths(edges):
-    """
-    Check if the graph forms exactly 3 DISCONNECTED paths from S to T.
-    Requirements:
-    1. Exactly 3 connected components
-    2. Each component is a path from one S port to one T port
-    3. Paths must connect s_i to t_i (same index i) - no permutation
-    4. Each component is disconnected from the others
-    """
+    """Check for 3 disjoint paths s_i → t_i."""
     adj = build_adjacency(edges)
-
-    # Find all connected components
     visited = set()
-    components = []
 
-    def bfs_component(start):
-        """BFS to find all nodes in the connected component containing start."""
-        component = set()
-        queue = [start]
-        component.add(start)
+    def bfs(start):
+        q, comp = [start], {start}
         visited.add(start)
+        while q:
+            x = q.pop(0)
+            for y in adj[x]:
+                if y not in visited:
+                    visited.add(y)
+                    comp.add(y)
+                    q.append(y)
+        return comp
 
-        while queue:
-            current = queue.pop(0)
-            for neighbor in adj[current]:
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    component.add(neighbor)
-                    queue.append(neighbor)
-
-        return component
-
-    # Find all components starting from S ports
-    for s_port in S:
-        if s_port not in visited:
-            component = bfs_component(s_port)
-            components.append(component)
-
-    # Must have exactly 3 components (one per S port)
-    if len(components) != 3:
+    comps = [bfs(sp) for sp in S if sp not in visited]
+    if len(comps) != 3:
         return False
 
-    # Check each component and verify correct S-T pairing
-    for component in components:
-        # Find which S and T ports are in this component
-        s_in_component = [port for port in component if port in S]
-        t_in_component = [port for port in component if port in T]
-
-        # Each component must have exactly 1 S and 1 T
-        if len(s_in_component) != 1 or len(t_in_component) != 1:
+    for comp in comps:
+        s_list = [p for p in comp if p in S]
+        t_list = [p for p in comp if p in T]
+        if len(s_list) != 1 or len(t_list) != 1 or s_list[0][1] != t_list[0][1]:
             return False
-
-        # Get the specific S and T ports
-        s_port = s_in_component[0]
-        t_port = t_in_component[0]
-
-        # CRITICAL: Check that s_i connects to t_i (same port number)
-        # s_port = ("s", i), t_port = ("t", j)
-        # We require i == j
-        s_index = s_port[1]  # port number (1, 2, or 3)
-        t_index = t_port[1]  # port number (1, 2, or 3)
-
-        if s_index != t_index:
-            return False  # Not the correct pairing!
-
-        # Check that this component forms a simple path (no branches)
-        # In a path, all nodes have degree ≤ 2, and exactly 2 endpoints have degree 1
-        degrees = []
-        for node in component:
-            degree = len([n for n in adj[node] if n in component])
-            degrees.append(degree)
-
-        # Count degree-1 nodes (endpoints)
-        endpoints = sum(1 for d in degrees if d == 1)
-
-        # All nodes should have degree 1 or 2
-        if not all(d in [1, 2] for d in degrees):
+        degs = [len([n for n in adj[v] if n in comp]) for v in comp]
+        if not all(d in (1, 2) for d in degs) or sum(1 for d in degs if d == 1) != 2:
             return False
-
-        # Should have exactly 2 endpoints (the path ends)
-        if endpoints != 2:
-            return False
-
     return True
 
 
-# ---- Generate all valid RHS configurations ----
 def generate_all_rhs_matchings():
-    """
-    Generate all ways to pair up the 12 RHS ports into 6 edges.
-    Constraints:
-    - Each port used exactly once (perfect matching)
-    - No t-t connections (no two T ports connected)
-    """
+    """Generate all perfect matchings on RHS_PORTS (no T-T edges)."""
     all_matchings = []
 
-    def build_matching(remaining_ports, current_matching):
-        """Recursively build perfect matchings."""
-        if len(current_matching) == 6:
-            # We have 6 edges, check if all ports are used
-            if len(remaining_ports) == 0:
-                all_matchings.append(list(current_matching))
+    def rec(remaining, cur):
+        if len(cur) == 6:
+            if not remaining:
+                all_matchings.append(list(cur))
             return
-
-        if len(remaining_ports) < 2:
+        if len(remaining) < 2:
             return
-
-        # Take the first remaining port and try pairing it with others
-        first = remaining_ports[0]
-        for i in range(1, len(remaining_ports)):
-            second = remaining_ports[i]
-
-            # Constraint: no t-t connection
+        first = remaining[0]
+        for i in range(1, len(remaining)):
+            second = remaining[i]
             if first in T and second in T:
                 continue
+            rec([p for j, p in enumerate(remaining) if j not in (0, i)], cur + [(first, second)])
 
-            # Create edge and recurse
-            edge = (first, second)
-            new_remaining = [p for j, p in enumerate(remaining_ports) if j != 0 and j != i]
-            build_matching(new_remaining, current_matching + [edge])
-
-    build_matching(RHS_PORTS, [])
+    rec(RHS_PORTS, [])
     return all_matchings
 
 
-# ---- Visualization ----
-def draw_graph(edges, title="Graph", filename=None):
-    """Draw the graph with ports arranged vertically with horizontal offset to avoid overlaps."""
-    fig, ax = plt.subplots(figsize=(12, 16))
+def get_all_cycles(edges):
+    """Get all cycles that will be removed. Returns list of cycles."""
+    E = [frozenset(e) if not isinstance(e, frozenset) else e for e in edges]
+    all_cycles = []
 
-    # Port positions
-    positions = {}
+    while True:
+        cyc = find_cycle(E)
+        if not cyc:
+            break
+        all_cycles.append(cyc)
+        E = [e for e in E if frozenset(e) not in {frozenset(c) for c in cyc}]
 
-    # S ports - left column (vertically aligned)
-    for i, port in enumerate([("s", 1), ("s", 2), ("s", 3)]):
-        positions[port] = (0, 8 - i * 3.5)
+    return all_cycles
 
-    # A, B, C ports - middle, each arranged as a triangle
-    # Triangles are vertically stacked: A at top, B in middle, C at bottom
-    # Triangle orientation: port 1 at top, ports 2 and 3 at bottom corners
 
-    # A ports - triangle at top (centered at y=8)
-    triangle_size = 0.6  # radius of triangle
-    a_center_y = 8
-    positions[("a", 1)] = (4.5, a_center_y + triangle_size)      # top
-    positions[("a", 2)] = (4.5 - triangle_size, a_center_y - triangle_size * 0.5)  # bottom left
-    positions[("a", 3)] = (4.5 + triangle_size, a_center_y - triangle_size * 0.5)  # bottom right
-
-    # B ports - triangle in middle (centered at y=4.5)
-    b_center_y = 4.5
-    positions[("b", 1)] = (4.5, b_center_y + triangle_size)      # top
-    positions[("b", 2)] = (4.5 - triangle_size, b_center_y - triangle_size * 0.5)  # bottom left
-    positions[("b", 3)] = (4.5 + triangle_size, b_center_y - triangle_size * 0.5)  # bottom right
-
-    # C ports - triangle at bottom (centered at y=1)
-    c_center_y = 1
-    positions[("c", 1)] = (4.5, c_center_y + triangle_size)      # top
-    positions[("c", 2)] = (4.5 - triangle_size, c_center_y - triangle_size * 0.5)  # bottom left
-    positions[("c", 3)] = (4.5 + triangle_size, c_center_y - triangle_size * 0.5)  # bottom right
-
-    # T ports - right column (vertically aligned)
-    for i, port in enumerate([("t", 1), ("t", 2), ("t", 3)]):
-        positions[port] = (9, 8 - i * 3.5)
-
-    # Colors
-    colors = {
-        "s": "lightblue",
-        "a": "lightgreen",
-        "b": "lightyellow",
-        "c": "lightcoral",
-        "t": "plum"
+def draw_graph_with_cycles(edges, cycles, title, filename):
+    """Draw graph with cycles highlighted."""
+    positions = {
+        ('s', 1): (-0.3, 5.3), ('s', 2): (0, 5), ('s', 3): (-0.3, 4.7),
+        ('t', 1): (10.3, 5.3), ('t', 2): (10, 5), ('t', 3): (10.3, 4.7),
+        ('a', 1): (4, 8), ('a', 2): (3.5, 7), ('a', 3): (4.5, 7),
+        ('b', 1): (5, 5), ('b', 2): (4.5, 4), ('b', 3): (5.5, 4),
+        ('c', 1): (4, 2), ('c', 2): (3.5, 1), ('c', 3): (4.5, 1),
     }
 
-    # Draw ports
-    for port, (x, y) in positions.items():
-        vertex, num = port
-        color = colors[vertex]
-        circle = plt.Circle((x, y), 0.2, color=color, ec='black', linewidth=2, zorder=3)
-        ax.add_patch(circle)
-        ax.text(x, y, f"{vertex}{num}", ha='center', va='center',
-                fontsize=10, fontweight='bold', zorder=4)
+    vertex_colors = {
+        **{p: 'lightblue' for p in S},
+        **{p: 'plum' for p in T},
+        **{p: 'lightgreen' for p in A},
+        **{p: 'lightyellow' for p in B},
+        **{p: 'lightcoral' for p in C},
+    }
+
+    # Identify cycle edges
+    cycle_edges = []
+    for i, cyc in enumerate(cycles):
+        for edge in cyc:
+            cycle_edges.append((frozenset(edge), i))
+
+    fig, ax = plt.subplots(figsize=(14, 10))
+
+    # Draw vertices
+    for v, (x, y) in positions.items():
+        r = 0.15
+        ax.add_patch(plt.Circle((x, y), r, color=vertex_colors[v], ec='black', lw=2, zorder=3))
+        label = f"{v[0]}{v[1]}"
+        ax.text(x, y, label, ha='center', va='center', fontsize=10, fontweight='bold', zorder=4)
+
+    # Count edge multiplicities
+    edge_counts = defaultdict(int)
+    for e in edges:
+        u, v = tuple(e) if isinstance(e, frozenset) else e
+        key = frozenset([u, v])
+        edge_counts[key] += 1
+
+    # Cycle colors
+    cycle_colors = ['red', 'orange', 'purple']
 
     # Draw edges
-    edge_set = {frozenset(e) if not isinstance(e, frozenset) else e for e in edges}
+    edge_drawn = defaultdict(int)
+    for e in edges:
+        u, v = tuple(e) if isinstance(e, frozenset) else e
+        if u not in positions or v not in positions:
+            continue
 
-    # Separate fixed edges from others
-    fixed_edges = {frozenset(e) for e in FIXED}
-
-    for edge in edge_set:
-        u, v = tuple(edge)
         x1, y1 = positions[u]
         x2, y2 = positions[v]
 
-        # Use blue for fixed LHS edges, black for RHS edges
-        if edge in fixed_edges:
-            ax.plot([x1, x2], [y1, y2], 'b-', linewidth=2.5, zorder=1, alpha=0.8)
+        key = frozenset([u, v])
+        total_parallel = edge_counts[key]
+        current_idx = edge_drawn[key]
+        edge_drawn[key] += 1
+
+        # Check if this edge is in a cycle
+        cycle_idx = None
+        for ck, cidx in cycle_edges:
+            if ck == key:
+                cycle_idx = cidx
+                break
+
+        if cycle_idx is not None:
+            color = cycle_colors[cycle_idx % len(cycle_colors)]
+            lw = 3
+            alpha = 0.9
         else:
-            ax.plot([x1, x2], [y1, y2], 'k-', linewidth=2, zorder=1)
+            color = 'gray'
+            lw = 2
+            alpha = 0.5
 
-    # Draw vertex labels (centered on each triangle)
-    ax.text(-0.7, 4.5, "S", ha='center', va='center', fontsize=16, fontweight='bold')
-    ax.text(4.5, a_center_y, "A", ha='center', va='center', fontsize=14, fontweight='bold',
-            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
-    ax.text(4.5, b_center_y, "B", ha='center', va='center', fontsize=14, fontweight='bold',
-            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
-    ax.text(4.5, c_center_y, "C", ha='center', va='center', fontsize=14, fontweight='bold',
-            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
-    ax.text(9.7, 4.5, "T", ha='center', va='center', fontsize=16, fontweight='bold')
+        if total_parallel > 1:
+            offset = (current_idx - (total_parallel - 1) / 2) * 0.3
+            mid_x, mid_y = (x1 + x2) / 2, (y1 + y2) / 2
+            dx, dy = x2 - x1, y2 - y1
+            norm = np.sqrt(dx**2 + dy**2)
+            perp_x, perp_y = -dy / norm, dx / norm
 
-    # Set plot properties
-    ax.set_xlim(-1.5, 10.5)
-    ax.set_ylim(-0.5, 10)
+            ctrl_x = mid_x + perp_x * offset
+            ctrl_y = mid_y + perp_y * offset
+
+            t = np.linspace(0, 1, 50)
+            bx = (1-t)**2 * x1 + 2*(1-t)*t * ctrl_x + t**2 * x2
+            by = (1-t)**2 * y1 + 2*(1-t)*t * ctrl_y + t**2 * y2
+            ax.plot(bx, by, color=color, lw=lw, alpha=alpha, zorder=1)
+
+            if cycle_idx is not None:
+                ax.text(ctrl_x, ctrl_y, f"{u[0]}{u[1]}-{v[0]}{v[1]}", fontsize=8,
+                       bbox=dict(boxstyle='round,pad=0.2', facecolor='pink', alpha=0.9),
+                       ha='center', va='center', zorder=2)
+        else:
+            ax.plot([x1, x2], [y1, y2], color=color, lw=lw, alpha=alpha, zorder=1)
+            mid_x, mid_y = (x1 + x2) / 2, (y1 + y2) / 2
+            if cycle_idx is not None:
+                ax.text(mid_x, mid_y, f"{u[0]}{u[1]}-{v[0]}{v[1]}", fontsize=8,
+                       bbox=dict(boxstyle='round,pad=0.2', facecolor='pink', alpha=0.9),
+                       ha='center', va='center', zorder=2)
+
+    ax.set_xlim(-1.5, 11.5)
+    ax.set_ylim(-0.5, 9.5)
     ax.set_aspect('equal')
     ax.axis('off')
-    ax.set_title(title, fontsize=18, fontweight='bold', pad=20)
+    ax.set_title(title, fontsize=14, fontweight='bold', pad=15)
 
-    # Legend
-    from matplotlib.lines import Line2D
-    legend_elements = [
-        mpatches.Patch(facecolor=colors[v], edgecolor='black', label=f'Vertex {v.upper()}')
-        for v in ['s', 'a', 'b', 'c', 't']
-    ]
-    # Add edge color legend
-    legend_elements.extend([
-        Line2D([0], [0], color='blue', linewidth=2.5, label='Fixed LHS edges'),
-        Line2D([0], [0], color='black', linewidth=2, label='RHS edges')
-    ])
-    ax.legend(handles=legend_elements, loc='upper right', fontsize=10)
+    # Add cycle information
+    cycle_text = ""
+    for i, cyc in enumerate(cycles):
+        if len(cyc) == 2:
+            u, v = cyc[0]
+            cycle_text += f"Cycle {i+1} (2-cycle): {u[0]}{u[1]} ⇄ {v[0]}{v[1]}\n"
+        else:
+            vertices = [u for u, _ in cyc]
+            vertices.append(vertices[0])
+            cycle_text += f"Cycle {i+1} ({len(cyc)}-cycle): {' → '.join([f'{v[0]}{v[1]}' for v in vertices])}\n"
+
+    ax.text(0.02, 0.98, cycle_text, transform=ax.transAxes,
+            fontsize=10, verticalalignment='top',
+            bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
 
     plt.tight_layout()
-
-    if filename:
-        plt.savefig(filename, dpi=150, bbox_inches='tight')
-        print(f"Saved: {filename}")
-    else:
-        plt.show()
-
+    plt.savefig(filename, dpi=150, bbox_inches='tight')
+    print(f"Saved: {filename}")
     plt.close()
 
 
-# ---- Main counting function ----
 def count_valid_configurations():
     """Count all valid configurations."""
     print("Generating all RHS matchings...")
     all_rhs = generate_all_rhs_matchings()
-    print(f"Total RHS matchings to check: {len(all_rhs)}")
+    print(f"Total RHS matchings: {len(all_rhs)}")
 
-    valid_count = 0
-    valid_examples = []
-    examples_with_cycles = []  # Track examples where cycles were removed
+    cycle_stats = defaultdict(list)
 
-    for idx, rhs_edges in enumerate(all_rhs):
+    for idx, rhs in enumerate(all_rhs):
         if (idx + 1) % 1000 == 0:
-            print(f"Checked {idx + 1}/{len(all_rhs)}...")
+            print(f"  Checked {idx + 1}/{len(all_rhs)}...")
 
-        # Combine LHS + RHS
-        combined = FIXED + rhs_edges
+        combined = FIXED + rhs
 
-        # Check port degrees
         if not check_port_degrees(combined):
             continue
 
-        # Remove cycles
-        after_removal = remove_all_cycles(combined)
+        after, num_cycles = remove_all_cycles(combined)
 
-        # Check if it forms 3 paths
-        if check_three_paths(after_removal):
-            valid_count += 1
+        if check_three_paths(after):
+            all_cycles = get_all_cycles(combined)
+            cycle_stats[num_cycles].append((rhs, combined, after, all_cycles))
 
-            # Prioritize examples where cycles were actually removed
-            had_cycle = len(combined) != len(after_removal)
-
-            if had_cycle and len(examples_with_cycles) < 5:
-                examples_with_cycles.append((rhs_edges, combined, after_removal))
-            elif len(valid_examples) < 5:
-                valid_examples.append((rhs_edges, combined, after_removal))
-
-    # Prefer examples with cycles, fall back to examples without cycles
-    if examples_with_cycles:
-        return valid_count, examples_with_cycles
-    return valid_count, valid_examples
+    return cycle_stats
 
 
-# ---- Main execution ----
 if __name__ == "__main__":
-    import sys
-
-    draw_mode = "--draw" in sys.argv
-
     print("="*60)
     print("6j Symbol Configuration Counter")
     print("="*60)
-    print(f"Fixed LHS edges: {len(FIXED)}")
-    print(f"RHS ports: {len(RHS_PORTS)}")
-    print()
 
-    # Draw the fixed LHS
-    if draw_mode:
-        print("Drawing LHS configuration...")
-        draw_graph(FIXED, title="Fixed LHS Configuration", filename="lhs_fixed.png")
-        print()
+    cycle_stats = count_valid_configurations()
 
-    # Count valid configurations
-    count, examples = count_valid_configurations()
+    total = sum(len(v) for v in cycle_stats.values())
 
     print()
     print("="*60)
-    print(f"TOTAL VALID CONFIGURATIONS: {count}")
+    print(f"TOTAL VALID CONFIGURATIONS: {total}")
     print("="*60)
 
-    # Show examples
-    if examples:
-        print(f"\nFirst {len(examples)} valid examples:\n")
-        for i, (rhs, combined, final) in enumerate(examples, 1):
-            print(f"Example {i}:")
-            print(f"  RHS edges: {len(rhs)}")
-            for edge in rhs:
-                print(f"    {edge}")
-            print(f"  Combined: {len(combined)} edges")
-            print(f"  After cycle removal: {len(final)} edges")
-            print()
+    print("\nCycle removal statistics:")
+    for num in sorted(cycle_stats.keys()):
+        print(f"  {num} cycle(s) removed: {len(cycle_stats[num])} configurations")
 
-            if draw_mode:
-                draw_graph(combined, f"Example {i}: Initial Combined (LHS + RHS)", f"ex{i}_initial.png")
-                draw_graph(final, f"Example {i}: Final (After Cycle Removal)", f"ex{i}_final.png")
+    # Draw examples
+    print("\nDrawing examples...")
 
-    if draw_mode:
-        print("\nAll diagrams saved!")
-    else:
-        print("\nTo generate diagrams, run: python3 SDcount.py --draw")
+    import os
+    output_dir = "cycle_examples"
+    os.makedirs(output_dir, exist_ok=True)
+    print(f"Creating output directory: {output_dir}/")
+
+    # Draw ALL examples with 2 cycles
+    if 2 in cycle_stats:
+        print(f"Drawing all {len(cycle_stats[2])} examples with 2 cycles removed:")
+        for i, (rhs, combined, final, all_cycles) in enumerate(cycle_stats[2]):
+            title = f"2 Cycles Example {i+1}/{len(cycle_stats[2])}"
+            filename = os.path.join(output_dir, f"2cycles_ex{i+1}.png")
+            draw_graph_with_cycles(combined, all_cycles, title, filename)
+
+    # Draw ALL examples with 3 cycles
+    if 3 in cycle_stats:
+        print(f"Drawing all {len(cycle_stats[3])} example(s) with 3 cycles removed:")
+        for i, (rhs, combined, final, all_cycles) in enumerate(cycle_stats[3]):
+            title = f"3 Cycles Example {i+1}/{len(cycle_stats[3])}"
+            filename = os.path.join(output_dir, f"3cycles_ex{i+1}.png")
+            draw_graph_with_cycles(combined, all_cycles, title, filename)
+
+    print(f"\nAll drawings saved to {output_dir}/")
+
+    # Show text examples
+    print("\nExamples (prioritized by cycle count):")
+    count = 0
+    for num in sorted(cycle_stats.keys(), reverse=True):
+        for rhs, combined, final, all_cycles in cycle_stats[num][:3]:
+            count += 1
+            print(f"\nExample {count} ({num} cycle(s) removed):")
+            print(f"  RHS edges:")
+            for e in rhs:
+                print(f"    {e}")
+            print(f"  Total edges: {len(combined)} → {len(final)} after removal")
+
+            if count >= 5:
+                break
+        if count >= 5:
+            break
