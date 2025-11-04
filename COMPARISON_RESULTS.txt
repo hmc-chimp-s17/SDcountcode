@@ -1,0 +1,99 @@
+================================================================
+COMPARISON: 6J vs PILLOW CONFIGURATIONS
+================================================================
+
+IMPLEMENTATION: SDcount_v3.py
+- Analyzes TWO different FIXED edge configurations
+- Generates separate visualizations for each
+- Same code, different initial conditions
+
+================================================================
+FIXED EDGE SETS
+================================================================
+
+6J Configuration:
+  (s1,a1) (s2,b2) (s3,c3)
+  (a2,b1) (b3,c2) (c1,a3)
+
+PILLOW Configuration:
+  (s1,a1) (s2,a2) (s3,c3)
+  (a3,b1) (b2,c2) (b3,c1)
+
+================================================================
+OVERALL RESULTS (IDENTICAL!)
+================================================================
+
+Both configurations yield:
+  TOTAL VALID: 693 configurations
+
+By cycles removed:
+  0 cycles: 480 configs (69.3%)
+  1 cycle:  188 configs (27.1%)
+  2 cycles:  24 configs ( 3.5%)
+  3 cycles:   1 config  ( 0.1%)
+
+================================================================
+SPECIAL CASE: All t's → same type (DIFFERENT!)
+================================================================
+
+6J Configuration:
+  Total: 30 configs (4.3%)
+  - 0 cycles: 24 configs (80.0%)
+  - 1 cycle:   6 configs (20.0%)
+  - 2 cycles:  0 configs
+  - 3 cycles:  0 configs
+
+PILLOW Configuration:
+  Total: 31 configs (4.5%)
+  - 0 cycles: 22 configs (71.0%)
+  - 1 cycle:   8 configs (25.8%)
+  - 2 cycles:  1 config  ( 3.2%)
+  - 3 cycles:  0 configs
+
+KEY DIFFERENCE:
+The PILLOW configuration has:
+  - 1 MORE special case (31 vs 30)
+  - 1 case with 2 cycles (6J has none!)
+  - More complex structure in special cases
+
+================================================================
+GENERATED FILES
+================================================================
+
+6J Configuration:
+  6j_cycle_examples/ (31 images):
+    - 6 with 1 cycle (all special cases)
+    - 24 with 2 cycles
+    - 1 with 3 cycles
+  
+  6j_t_same_type_all/ (30 images):
+    - Complete reference of all t→same-type cases
+
+PILLOW Configuration:
+  pillow_cycle_examples/ (33 images):
+    - 8 with 1 cycle (all special cases)
+    - 24 with 2 cycles
+    - 1 with 3 cycles
+  
+  pillow_t_same_type_all/ (31 images):
+    - Complete reference of all t→same-type cases
+    - Includes 1 case with 2 cycles!
+
+================================================================
+KEY INSIGHTS
+================================================================
+
+1. Overall statistics are IDENTICAL between 6J and PILLOW
+   - Same total count (693)
+   - Same distribution by cycles
+
+2. Special cases differ significantly:
+   - PILLOW has more special cases (31 vs 30)
+   - PILLOW has a unique 2-cycle special case
+   - PILLOW special cases are more complex
+
+3. This suggests the initial FIXED configuration affects
+   the structure of special symmetric cases but not the
+   overall combinatorial count.
+
+================================================================

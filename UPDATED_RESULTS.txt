@@ -1,0 +1,81 @@
+================================================================
+UPDATED: SDcount_v3.py - Drawing t-same-type with ≥1 cycle
+================================================================
+
+CHANGE: Modified drawing to show only t-same-type cases with
+        ≥1 cycle removed (instead of all t-same-type cases)
+
+================================================================
+GENERATED FILES
+================================================================
+
+6J Configuration - 6j_cycle_examples/ (31 images):
+
+  t_same_1cycles_*.png (6 files):
+    - Special cases: all t's → same type AND 1 cycle removed
+    - Files: t_same_1cycles_1.png through t_same_1cycles_6.png
+  
+  2cycles_*.png (24 files):
+    - General 2-cycle cases
+  
+  3cycles_*.png (1 file):
+    - General 3-cycle case
+
+
+PILLOW Configuration - pillow_cycle_examples/ (34 images):
+
+  t_same_1cycles_*.png (8 files):
+    - Special cases: all t's → same type AND 1 cycle removed
+    - Files: t_same_1cycles_1,2,3,4,5,6,8,9.png
+  
+  t_same_2cycles_7.png (1 file):
+    - UNIQUE special case: all t's → same type AND 2 cycles!
+    - Only exists in PILLOW configuration
+  
+  2cycles_*.png (24 files):
+    - General 2-cycle cases
+  
+  3cycles_*.png (1 file):
+    - General 3-cycle case
+
+================================================================
+KEY HIGHLIGHTS
+================================================================
+
+1. Filename shows cycle count: t_same_{n}cycles_*.png
+
+2. 6J has 6 special cases with ≥1 cycle (all have 1 cycle)
+
+3. PILLOW has 9 special cases with ≥1 cycle:
+   - 8 with 1 cycle
+   - 1 with 2 cycles (UNIQUE to PILLOW!)
+
+4. The unique PILLOW 2-cycle special case (t_same_2cycles_7.png)
+   is particularly interesting - symmetric structure with
+   higher cycle complexity
+
+5. Both still maintain complete reference folders:
+   - 6j_t_same_type_all/ (30 images)
+   - pillow_t_same_type_all/ (31 images)
+
+================================================================
+STATISTICS SUMMARY
+================================================================
+
+6J Configuration:
+  Total valid: 693
+  Special (t→same): 30
+    - 0 cycles: 24
+    - 1 cycle:   6 ← drawn to cycle_examples
+    - 2 cycles:  0
+    - 3 cycles:  0
+
+PILLOW Configuration:
+  Total valid: 693
+  Special (t→same): 31
+    - 0 cycles: 22
+    - 1 cycle:   8 ← drawn to cycle_examples
+    - 2 cycles:  1 ← drawn to cycle_examples (UNIQUE!)
+    - 3 cycles:  0
+
+================================================================
