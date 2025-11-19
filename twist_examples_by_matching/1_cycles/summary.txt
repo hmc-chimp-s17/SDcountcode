@@ -1,0 +1,41 @@
+Matching with 1 original cycles (index 31)
+==================================================
+
+RHS edges:
+  t1-a1
+  t2-a2
+  t3-b2
+  a3-b1
+  b3-c2
+  c1-c3
+
+Total valid twist assignments: 7
+
+Twist variant 1:
+  RHS twists: (0, 0, 1, 0, 0, 0)
+  Cycles removed: 1
+
+Twist variant 2:
+  RHS twists: (0, 0, 1, 1, 0, -1)
+  Cycles removed: 1
+
+Twist variant 3:
+  RHS twists: (0, 0, 1, -1, 0, 1)
+  Cycles removed: 1
+
+Twist variant 4:
+  RHS twists: (0, 1, 1, 0, 0, -1)
+  Cycles removed: 1
+
+Twist variant 5:
+  RHS twists: (0, 1, 1, -1, 0, 0)
+  Cycles removed: 1
+
+Twist variant 6:
+  RHS twists: (0, -1, 1, 0, 0, 1)
+  Cycles removed: 1
+
+Twist variant 7:
+  RHS twists: (0, -1, 1, 1, 0, 0)
+  Cycles removed: 1
+
