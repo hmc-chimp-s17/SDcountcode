@@ -1,0 +1,80 @@
+============================================================
+NLO Configuration with Twist - Summary
+Path requirements: s1-t1 (twist 0), s2-t3 (twist 1), s3-t2 (twist 0)
+============================================================
+
+6J:
+  Total valid configurations (with twist): 9939
+  By cycles removed (with twist):
+    0 cycles: 8544
+    1 cycles: 1328
+    2 cycles: 66
+    3 cycles: 1
+
+  Original matchings (without twist):
+    0 cycles: 480 matchings
+    1 cycles: 188 matchings
+    2 cycles: 24 matchings
+    3 cycles: 1 matchings
+    Total: 693 matchings
+
+  Original matchings that also pass WITH twist (by original cycles):
+    0 cycles: 480/480 matchings
+    1 cycles: 188/188 matchings
+    2 cycles: 24/24 matchings
+    3 cycles: 1/1 matchings
+    Total: 693/693 matchings
+
+  SPECIAL: All t's → same type (configs with twist): 466 configs
+    0 cycles: 424
+    1 cycles: 42
+
+  SPECIAL (All t's → same type) - Original matchings:
+    0 cycles: 24 matchings
+    1 cycles: 6 matchings
+    Total: 30 matchings
+
+  SPECIAL (All t's → same type) - Also pass WITH twist:
+    0 cycles: 24/24 matchings
+    1 cycles: 6/6 matchings
+    Total: 30/30 matchings
+
+PILLOW:
+  Total valid configurations (with twist): 9939
+  By cycles removed (with twist):
+    0 cycles: 8544
+    1 cycles: 1328
+    2 cycles: 66
+    3 cycles: 1
+
+  Original matchings (without twist):
+    0 cycles: 480 matchings
+    1 cycles: 188 matchings
+    2 cycles: 24 matchings
+    3 cycles: 1 matchings
+    Total: 693 matchings
+
+  Original matchings that also pass WITH twist (by original cycles):
+    0 cycles: 480/480 matchings
+    1 cycles: 188/188 matchings
+    2 cycles: 24/24 matchings
+    3 cycles: 1/1 matchings
+    Total: 693/693 matchings
+
+  SPECIAL: All t's → same type (configs with twist): 449 configs
+    0 cycles: 388
+    1 cycles: 58
+    2 cycles: 3
+
+  SPECIAL (All t's → same type) - Original matchings:
+    0 cycles: 22 matchings
+    1 cycles: 8 matchings
+    2 cycles: 1 matchings
+    Total: 31 matchings
+
+  SPECIAL (All t's → same type) - Also pass WITH twist:
+    0 cycles: 22/22 matchings
+    1 cycles: 8/8 matchings
+    2 cycles: 1/1 matchings
+    Total: 31/31 matchings
+

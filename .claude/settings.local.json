@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(python3 -m pip install:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(SDcountnlo_results.txt)",
+      "Bash(cat:*)",
+      "Bash(pkill:*)",
+      "Bash(tee:*)"
     ],
     "deny": [],
     "ask": []
