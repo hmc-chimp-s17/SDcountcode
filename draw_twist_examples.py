@@ -11,7 +11,7 @@ from itertools import product
 
 # Import from main module
 from SDcountnlo_twist import (
-    FIXED_6J, S, T, A, B, C, RHS_PORTS, NLO_PAIRING, REQUIRED_TWIST,
+    FIXED_6J, FIXED_PILLOW, S, T, A, B, C, RHS_PORTS, NLO_PAIRING, REQUIRED_TWIST,
     generate_rhs_matchings, check_degrees, remove_cycles_with_zero_twist,
     check_three_paths_structure, check_three_paths_with_twist, find_cycle,
     all_t_same_type, get_removed_cycles
@@ -148,57 +148,29 @@ def draw_with_twist(combined, twists, cycles, title, filename):
     plt.close()
 
 
-def main():
-    print("="*60)
-    print("Finding non-special matchings and their twist assignments")
-    print("="*60)
-
-    # Generate all RHS matchings
-    all_rhs = generate_rhs_matchings()
-
-    # Find matchings with valid degrees
-    valid_matchings = []
-    for idx, rhs in enumerate(all_rhs):
-        combined = FIXED_6J + rhs
-        edges_no_twist = [((u, v), 0) for u, v in combined]
-        if check_degrees(edges_no_twist):
-            valid_matchings.append((idx, rhs, combined))
-
-    print(f"Total matchings with valid degrees: {len(valid_matchings)}")
-
-    # Find matchings that pass untwisted test, organized by cycles
-    # Exclude special cases (all t's → same type)
-    matchings_by_cycles = defaultdict(list)
-
-    for idx, rhs, combined in valid_matchings:
-        # Skip special cases
-        if all_t_same_type(rhs):
-            continue
-
-        edges_no_twist = [((u, v), 0) for u, v in combined]
-        after, num_cycles, _ = remove_cycles_with_zero_twist(edges_no_twist)
-
-        if check_three_paths_structure(after):
-            matchings_by_cycles[num_cycles].append((idx, rhs, combined))
-
-    print("\nNon-special matchings that pass untwisted test:")
-    for n in sorted(matchings_by_cycles.keys()):
-        print(f"  {n} cycles: {len(matchings_by_cycles[n])} matchings")
-
-    # Create output directory
-    output_dir = "twist_examples_by_matching"
-    os.makedirs(output_dir, exist_ok=True)
-
-    # For each cycle count, pick one matching and find all valid twist assignments
+def process_matchings(matchings_by_cycles, output_dir, config_label, is_special=False):
+    """Process matchings and generate all twist variants."""
     for n_cycles in sorted(matchings_by_cycles.keys()):
         if not matchings_by_cycles[n_cycles]:
             continue
 
-        # Pick the first non-special matching
+        # Pick the first matching
         idx, rhs, combined = matchings_by_cycles[n_cycles][0]
 
         print(f"\n{'='*60}")
-        print(f"Matching with {n_cycles} cycles (index {idx})")
+        if is_special:
+            # Determine which type all t's connect to
+            t_type = None
+            for u, v in rhs:
+                if u[0] == 't':
+                    t_type = v[0]
+                    break
+                elif v[0] == 't':
+                    t_type = u[0]
+                    break
+            print(f"SPECIAL Matching with {n_cycles} cycles (index {idx}, all t→{t_type})")
+        else:
+            print(f"Matching with {n_cycles} cycles (index {idx})")
         print(f"{'='*60}")
 
         # Print the matching
@@ -237,17 +209,26 @@ def main():
         print(f"\nValid twist assignments: {len(valid_twist_assignments)}")
 
         # Draw all valid twist assignments
-        subdir = f"{output_dir}/{n_cycles}_cycles"
+        if is_special:
+            subdir = f"{output_dir}/special_{n_cycles}_cycles"
+        else:
+            subdir = f"{output_dir}/{n_cycles}_cycles"
         os.makedirs(subdir, exist_ok=True)
 
         for i, (twists, cycles, num_removed) in enumerate(valid_twist_assignments, 1):
-            title = f"6J - {n_cycles} orig cycles - Twist variant {i}/{len(valid_twist_assignments)}"
+            if is_special:
+                title = f"{config_label} SPECIAL - {n_cycles} orig cycles - Twist variant {i}/{len(valid_twist_assignments)}"
+            else:
+                title = f"{config_label} - {n_cycles} orig cycles - Twist variant {i}/{len(valid_twist_assignments)}"
             filename = f"{subdir}/twist_variant_{i}.png"
             draw_with_twist(combined, twists, cycles, title, filename)
 
         # Also save a summary
         with open(f"{subdir}/summary.txt", 'w') as f:
-            f.write(f"Matching with {n_cycles} original cycles (index {idx})\n")
+            if is_special:
+                f.write(f"SPECIAL Matching with {n_cycles} original cycles (index {idx})\n")
+            else:
+                f.write(f"Matching with {n_cycles} original cycles (index {idx})\n")
             f.write("="*50 + "\n\n")
 
             f.write("RHS edges:\n")
@@ -263,6 +244,81 @@ def main():
                 f.write("\n")
 
         print(f"Saved to {subdir}/")
+
+
+def process_configuration(fixed_edges, config_label, output_dir):
+    """Process a single configuration (6J or PILLOW)."""
+    print("\n" + "="*60)
+    print(f"Processing {config_label}")
+    print("="*60)
+
+    # Generate all RHS matchings
+    all_rhs = generate_rhs_matchings()
+
+    # Find matchings with valid degrees
+    valid_matchings = []
+    for idx, rhs in enumerate(all_rhs):
+        combined = fixed_edges + rhs
+        edges_no_twist = [((u, v), 0) for u, v in combined]
+        if check_degrees(edges_no_twist):
+            valid_matchings.append((idx, rhs, combined))
+
+    print(f"Total matchings with valid degrees: {len(valid_matchings)}")
+
+    # Find matchings that pass untwisted test, organized by cycles
+    # Separate non-special and special cases
+    matchings_by_cycles = defaultdict(list)
+    special_by_cycles = defaultdict(list)
+
+    for idx, rhs, combined in valid_matchings:
+        edges_no_twist = [((u, v), 0) for u, v in combined]
+        after, num_cycles, _ = remove_cycles_with_zero_twist(edges_no_twist)
+
+        if check_three_paths_structure(after):
+            if all_t_same_type(rhs):
+                special_by_cycles[num_cycles].append((idx, rhs, combined))
+            else:
+                matchings_by_cycles[num_cycles].append((idx, rhs, combined))
+
+    print("\nNon-special matchings that pass untwisted test:")
+    for n in sorted(matchings_by_cycles.keys()):
+        print(f"  {n} cycles: {len(matchings_by_cycles[n])} matchings")
+
+    print("\nSPECIAL matchings that pass untwisted test:")
+    for n in sorted(special_by_cycles.keys()):
+        print(f"  {n} cycles: {len(special_by_cycles[n])} matchings")
+
+    # Process non-special matchings
+    print("\n" + "="*60)
+    print(f"Processing {config_label} NON-SPECIAL matchings")
+    print("="*60)
+    process_matchings(matchings_by_cycles, output_dir, config_label, is_special=False)
+
+    # Process special matchings
+    print("\n" + "="*60)
+    print(f"Processing {config_label} SPECIAL matchings (all t's → same type)")
+    print("="*60)
+    process_matchings(special_by_cycles, output_dir, config_label, is_special=True)
+
+
+def main():
+    print("="*60)
+    print("Finding matchings and their twist assignments")
+    print("="*60)
+
+    # Create main output directory
+    base_dir = "twist_examples_by_matching"
+    os.makedirs(base_dir, exist_ok=True)
+
+    # Process 6J configuration
+    output_dir_6j = f"{base_dir}/6J"
+    os.makedirs(output_dir_6j, exist_ok=True)
+    process_configuration(FIXED_6J, "6J", output_dir_6j)
+
+    # Process PILLOW configuration
+    output_dir_pillow = f"{base_dir}/PILLOW"
+    os.makedirs(output_dir_pillow, exist_ok=True)
+    process_configuration(FIXED_PILLOW, "PILLOW", output_dir_pillow)
 
     print("\n" + "="*60)
     print("Done!")

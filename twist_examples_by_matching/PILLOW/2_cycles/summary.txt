@@ -1,0 +1,25 @@
+Matching with 2 original cycles (index 224)
+==================================================
+
+RHS edges:
+  t1-a1
+  t2-b1
+  t3-a2
+  a3-c3
+  b2-c2
+  b3-c1
+
+Total valid twist assignments: 3
+
+Twist variant 1:
+  RHS twists: (0, 0, 1, 0, 0, 0)
+  Cycles removed: 2
+
+Twist variant 2:
+  RHS twists: (0, 1, 1, -1, 0, 0)
+  Cycles removed: 2
+
+Twist variant 3:
+  RHS twists: (0, -1, 1, 1, 0, 0)
+  Cycles removed: 2
+

@@ -1,0 +1,85 @@
+Matching with 0 original cycles (index 140)
+==================================================
+
+RHS edges:
+  t1-a1
+  t2-a3
+  t3-b2
+  a2-b3
+  b1-c3
+  c1-c2
+
+Total valid twist assignments: 18
+
+Twist variant 1:
+  RHS twists: (0, 0, 0, 0, 0, 1)
+  Cycles removed: 0
+
+Twist variant 2:
+  RHS twists: (0, 0, 0, 1, 0, 0)
+  Cycles removed: 0
+
+Twist variant 3:
+  RHS twists: (0, 0, 1, 0, 0, 0)
+  Cycles removed: 0
+
+Twist variant 4:
+  RHS twists: (0, 0, 1, 1, 0, -1)
+  Cycles removed: 0
+
+Twist variant 5:
+  RHS twists: (0, 0, 1, -1, 0, 1)
+  Cycles removed: 0
+
+Twist variant 6:
+  RHS twists: (0, 0, -1, 1, 0, 1)
+  Cycles removed: 0
+
+Twist variant 7:
+  RHS twists: (0, 1, 0, 0, -1, 1)
+  Cycles removed: 0
+
+Twist variant 8:
+  RHS twists: (0, 1, 0, 1, -1, 0)
+  Cycles removed: 0
+
+Twist variant 9:
+  RHS twists: (0, 1, 1, 0, -1, 0)
+  Cycles removed: 0
+
+Twist variant 10:
+  RHS twists: (0, 1, 1, 1, -1, -1)
+  Cycles removed: 0
+
+Twist variant 11:
+  RHS twists: (0, 1, 1, -1, -1, 1)
+  Cycles removed: 0
+
+Twist variant 12:
+  RHS twists: (0, 1, -1, 1, -1, 1)
+  Cycles removed: 0
+
+Twist variant 13:
+  RHS twists: (0, -1, 0, 0, 1, 1)
+  Cycles removed: 0
+
+Twist variant 14:
+  RHS twists: (0, -1, 0, 1, 1, 0)
+  Cycles removed: 0
+
+Twist variant 15:
+  RHS twists: (0, -1, 1, 0, 1, 0)
+  Cycles removed: 0
+
+Twist variant 16:
+  RHS twists: (0, -1, 1, 1, 1, -1)
+  Cycles removed: 0
+
+Twist variant 17:
+  RHS twists: (0, -1, 1, -1, 1, 1)
+  Cycles removed: 0
+
+Twist variant 18:
+  RHS twists: (0, -1, -1, 1, 1, 1)
+  Cycles removed: 0
+
