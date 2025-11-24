@@ -1,0 +1,206 @@
+PILLOW - All 0-cycle SPECIAL matchings (untwisted)
+============================================================
+
+Total matchings: 22
+  Type a: 8
+  Type b: 6
+  Type c: 8
+
+Matching 1 (index 106, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b2
+    b3-c2
+    c1-c3
+
+Matching 2 (index 107, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b2
+    b3-c3
+    c1-c2
+
+Matching 3 (index 108, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b3
+    b2-c1
+    c2-c3
+
+Matching 4 (index 110, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b3
+    b2-c3
+    c1-c2
+
+Matching 5 (index 111, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c1
+    b2-b3
+    c2-c3
+
+Matching 6 (index 113, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c1
+    b2-c3
+    b3-c2
+
+Matching 7 (index 114, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c2
+    b2-b3
+    c1-c3
+
+Matching 8 (index 115, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c2
+    b2-c1
+    b3-c3
+
+Matching 9 (index 2883, type b):
+  RHS edges:
+    t1-b1
+    t2-b2
+    t3-b3
+    a1-a3
+    a2-c1
+    c2-c3
+
+Matching 10 (index 2989, type b):
+  RHS edges:
+    t1-b1
+    t2-b3
+    t3-b2
+    a1-a3
+    a2-c2
+    c1-c3
+
+Matching 11 (index 3730, type b):
+  RHS edges:
+    t1-b2
+    t2-b1
+    t3-b3
+    a1-c2
+    a2-c1
+    a3-c3
+
+Matching 12 (index 3834, type b):
+  RHS edges:
+    t1-b2
+    t2-b3
+    t3-b1
+    a1-c2
+    a2-a3
+    c1-c3
+
+Matching 13 (index 4567, type b):
+  RHS edges:
+    t1-b3
+    t2-b1
+    t3-b2
+    a1-c1
+    a2-c2
+    a3-c3
+
+Matching 14 (index 4671, type b):
+  RHS edges:
+    t1-b3
+    t2-b2
+    t3-b1
+    a1-c1
+    a2-a3
+    c2-c3
+
+Matching 15 (index 5869, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-a3
+    a2-b2
+    b1-b3
+
+Matching 16 (index 5872, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-b1
+    a2-b2
+    a3-b3
+
+Matching 17 (index 5877, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-b3
+    a2-a3
+    b1-b2
+
+Matching 18 (index 5878, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-b3
+    a2-b1
+    a3-b2
+
+Matching 19 (index 6710, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-a3
+    a2-b3
+    b1-b2
+
+Matching 20 (index 6713, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b1
+    a2-b3
+    a3-b2
+
+Matching 21 (index 6714, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b2
+    a2-a3
+    b1-b3
+
+Matching 22 (index 6715, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b2
+    a2-b1
+    a3-b3
+
