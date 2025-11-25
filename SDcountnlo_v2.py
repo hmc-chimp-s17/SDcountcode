@@ -1,15 +1,16 @@
 """
 SDcountnlo_v2.py - Simple and Intuitive Version
 
-Find matchings where the s2-t3 path has more than one cycle after merging a,b,c vertices.
+Find matchings where the s2-t3 path has at least one cycle after merging a,b,c vertices.
+Self-loops are NOT counted as cycles.
 
 Steps:
 1. Find non-special 1-cycle and special 0-cycle matchings with NLO pairing (s1-t1, s2-t3, s3-t2)
 2. Remove cycles
 3. Extract the s2-t3 path
 4. Merge vertices: a1,a2,a3 → a; b1,b2,b3 → b; c1,c2,c3 → c
-5. Count cycles in the merged s2-t3 path
-6. Keep only matchings with >1 cycles
+5. Count cycles in the merged s2-t3 path (excluding self-loops)
+6. Keep only matchings with >=1 cycles
 """
 
 from collections import defaultdict
@@ -118,14 +119,15 @@ def find_cycle(edges):
     if not edges:
         return None
 
-    # Check self-loops
-    for u, v in edges:
-        if u == v:
-            return [(u, v)]
+    # Check self-loops (but don't return them - skip to next)
+    non_selfloop_edges = [(u, v) for u, v in edges if u != v]
+
+    if not non_selfloop_edges:
+        return None
 
     # Check parallel edges (2-cycles)
     edge_count = defaultdict(int)
-    for u, v in edges:
+    for u, v in non_selfloop_edges:
         edge_count[frozenset([u, v])] += 1
     for endpoints, count in edge_count.items():
         if count >= 2:
@@ -133,7 +135,7 @@ def find_cycle(edges):
             return [(u, v), (v, u)]
 
     # Find longer cycles with DFS
-    adj = build_adj(edges)
+    adj = build_adj(non_selfloop_edges)
     visited = set()
     parent = {}
 
@@ -219,7 +221,7 @@ def find_matchings_with_multiple_cycles(fixed_edges, label):
     print(f"Found {len(one_cycle_nonspecial)} non-special 1-cycle matchings")
     print(f"Found {len(zero_cycle_special)} special 0-cycle matchings")
 
-    # Check which have >1 cycles in s2-t3 after merging
+    # Check which have >=1 cycles in s2-t3 after merging (excluding self-loops)
     results = []
 
     print(f"\nChecking s2-t3 path after merging...")
@@ -229,7 +231,7 @@ def find_matchings_with_multiple_cycles(fixed_edges, label):
         merged_path = merge_vertices(s2_t3_path)
         num_cycles_in_path = count_cycles(merged_path)
 
-        if num_cycles_in_path > 1:
+        if num_cycles_in_path >= 1:
             results.append({
                 'type': '1-cycle non-special',
                 'idx': idx,
@@ -248,7 +250,7 @@ def find_matchings_with_multiple_cycles(fixed_edges, label):
         merged_path = merge_vertices(s2_t3_path)
         num_cycles_in_path = count_cycles(merged_path)
 
-        if num_cycles_in_path > 1:
+        if num_cycles_in_path >= 1:
             results.append({
                 'type': '0-cycle special',
                 'idx': idx,
@@ -266,7 +268,7 @@ def find_matchings_with_multiple_cycles(fixed_edges, label):
     one_cycle_count = sum(1 for r in results if r['type'] == '1-cycle non-special')
     zero_cycle_count = sum(1 for r in results if r['type'] == '0-cycle special')
 
-    print(f"\nResults (s2-t3 path with >1 cycles after merging):")
+    print(f"\nResults (s2-t3 path with >=1 cycles after merging, excluding self-loops):")
     print(f"  1-cycle non-special: {one_cycle_count}")
     print(f"  0-cycle special: {zero_cycle_count}")
     print(f"  Total: {len(results)}")
