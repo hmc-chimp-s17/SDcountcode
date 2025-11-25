@@ -1,0 +1,3714 @@
+======================================================================
+6J - Untwisted Matchings (No Twist Parameters)
+======================================================================
+
+======================================================================
+1-CYCLE NON-SPECIAL MATCHINGS
+======================================================================
+Total: 182 matchings
+
+Matching 1 (index 31):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-b2
+    a3-b1
+    b3-c2
+    c1-c3
+
+Matching 2 (index 35):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-b2
+    a3-b3
+    b1-c3
+    c1-c2
+
+Matching 3 (index 36):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-b2
+    a3-c1
+    b1-b3
+    c2-c3
+
+Matching 4 (index 37):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-b2
+    a3-c1
+    b1-c2
+    b3-c3
+
+Matching 5 (index 41):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-b2
+    a3-c2
+    b1-c3
+    b3-c1
+
+Matching 6 (index 43):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-b2
+    a3-c3
+    b1-c1
+    b3-c2
+
+Matching 7 (index 53):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-b3
+    a3-c1
+    b1-c3
+    b2-c2
+
+Matching 8 (index 65):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-c1
+    a3-b2
+    b1-c3
+    b3-c2
+
+Matching 9 (index 86):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-c2
+    a3-c1
+    b1-c3
+    b2-b3
+
+Matching 10 (index 121):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b1
+    a2-b2
+    b3-c2
+    c1-c3
+
+Matching 11 (index 135):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b2
+    a2-b1
+    b3-c1
+    c2-c3
+
+Matching 12 (index 137):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b2
+    a2-b1
+    b3-c3
+    c1-c2
+
+Matching 13 (index 139):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b2
+    a2-b3
+    b1-c2
+    c1-c3
+
+Matching 14 (index 143):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b2
+    a2-c1
+    b1-c3
+    b3-c2
+
+Matching 15 (index 144):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b2
+    a2-c2
+    b1-b3
+    c1-c3
+
+Matching 16 (index 148):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b2
+    a2-c3
+    b1-c1
+    b3-c2
+
+Matching 17 (index 151):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b3
+    a2-b1
+    b2-c2
+    c1-c3
+
+Matching 18 (index 180):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-c2
+    a2-b1
+    b2-b3
+    c1-c3
+
+Matching 19 (index 238):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-a3
+    a2-c3
+    b2-c1
+    b3-c2
+
+Matching 20 (index 241):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b2
+    a2-a3
+    b3-c2
+    c1-c3
+
+Matching 21 (index 243):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b2
+    a2-b3
+    a3-c1
+    c2-c3
+
+Matching 22 (index 248):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b2
+    a2-c1
+    a3-c3
+    b3-c2
+
+Matching 23 (index 250):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b2
+    a2-c2
+    a3-c1
+    b3-c3
+
+Matching 24 (index 252):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b2
+    a2-c3
+    a3-b3
+    c1-c2
+
+Matching 25 (index 254):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b2
+    a2-c3
+    a3-c2
+    b3-c1
+
+Matching 26 (index 268):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b3
+    a2-c3
+    a3-c1
+    b2-c2
+
+Matching 27 (index 282):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-c1
+    a2-c3
+    a3-b2
+    b3-c2
+
+Matching 28 (index 299):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-c2
+    a2-c3
+    a3-c1
+    b2-b3
+
+Matching 29 (index 426):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a2
+    a3-c1
+    b1-b2
+    c2-c3
+
+Matching 30 (index 435):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a3
+    a2-b1
+    b2-c1
+    c2-c3
+
+Matching 31 (index 453):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b1
+    a2-b2
+    a3-c1
+    c2-c3
+
+Matching 32 (index 465):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b2
+    a2-a3
+    b1-c1
+    c2-c3
+
+Matching 33 (index 469):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b2
+    a2-b1
+    a3-c2
+    c1-c3
+
+Matching 34 (index 470):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b2
+    a2-b1
+    a3-c3
+    c1-c2
+
+Matching 35 (index 471):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b2
+    a2-c1
+    a3-b1
+    c2-c3
+
+Matching 36 (index 475):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b2
+    a2-c2
+    a3-c1
+    b1-c3
+
+Matching 37 (index 478):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b2
+    a2-c3
+    a3-c1
+    b1-c2
+
+Matching 38 (index 483):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-c1
+    a2-b1
+    a3-b2
+    c2-c3
+
+Matching 39 (index 537):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a2
+    a3-c3
+    b1-b2
+    b3-c2
+
+Matching 40 (index 560):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b1
+    a2-b2
+    a3-c3
+    b3-c2
+
+Matching 41 (index 572):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b2
+    a2-a3
+    b1-c3
+    b3-c2
+
+Matching 42 (index 573):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b2
+    a2-b1
+    a3-b3
+    c2-c3
+
+Matching 43 (index 574):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b2
+    a2-b1
+    a3-c2
+    b3-c3
+
+Matching 44 (index 578):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b2
+    a2-b3
+    a3-c3
+    b1-c2
+
+Matching 45 (index 581):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b2
+    a2-c2
+    a3-c3
+    b1-b3
+
+Matching 46 (index 582):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b2
+    a2-c3
+    a3-b1
+    b3-c2
+
+Matching 47 (index 590):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b3
+    a2-b1
+    a3-c3
+    b2-c2
+
+Matching 48 (index 605):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-c2
+    a2-b1
+    a3-c3
+    b2-b3
+
+Matching 49 (index 639):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a2
+    a3-c1
+    b1-b2
+    b3-c3
+
+Matching 50 (index 646):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a3
+    a2-b1
+    b2-c1
+    b3-c3
+
+Matching 51 (index 664):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b1
+    a2-b2
+    a3-c1
+    b3-c3
+
+Matching 52 (index 676):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b2
+    a2-a3
+    b1-c1
+    b3-c3
+
+Matching 53 (index 678):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b2
+    a2-b1
+    a3-b3
+    c1-c3
+
+Matching 54 (index 680):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b2
+    a2-b1
+    a3-c3
+    b3-c1
+
+Matching 55 (index 682):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b2
+    a2-b3
+    a3-c1
+    b1-c3
+
+Matching 56 (index 684):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b2
+    a2-c1
+    a3-b1
+    b3-c3
+
+Matching 57 (index 689):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b2
+    a2-c3
+    a3-c1
+    b1-b3
+
+Matching 58 (index 708):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-c1
+    a2-b1
+    a3-b2
+    b3-c3
+
+Matching 59 (index 736):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-b1
+    b2-c1
+    b3-c2
+
+Matching 60 (index 739):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-b2
+    b1-c1
+    b3-c2
+
+Matching 61 (index 741):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-b3
+    b1-b2
+    c1-c2
+
+Matching 62 (index 745):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-c1
+    b1-b3
+    b2-c2
+
+Matching 63 (index 746):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-c1
+    b1-c2
+    b2-b3
+
+Matching 64 (index 747):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-c2
+    b1-b2
+    b3-c1
+
+Matching 65 (index 750):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b1
+    b2-b3
+    c1-c2
+
+Matching 66 (index 752):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b1
+    b2-c2
+    b3-c1
+
+Matching 67 (index 754):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b2
+    b1-c1
+    b3-c2
+
+Matching 68 (index 758):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b3
+    b1-c2
+    b2-c1
+
+Matching 69 (index 759):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-c1
+    b1-b2
+    b3-c2
+
+Matching 70 (index 763):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-c2
+    b1-b3
+    b2-c1
+
+Matching 71 (index 766):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-a3
+    b2-c1
+    b3-c2
+
+Matching 72 (index 768):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-b2
+    a3-b3
+    c1-c2
+
+Matching 73 (index 770):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-b2
+    a3-c2
+    b3-c1
+
+Matching 74 (index 772):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-b3
+    a3-c1
+    b2-c2
+
+Matching 75 (index 774):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-c1
+    a3-b2
+    b3-c2
+
+Matching 76 (index 779):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-c2
+    a3-c1
+    b2-b3
+
+Matching 77 (index 780):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-a3
+    b1-b3
+    c1-c2
+
+Matching 78 (index 782):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-a3
+    b1-c2
+    b3-c1
+
+Matching 79 (index 786):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-b3
+    a3-b1
+    c1-c2
+
+Matching 80 (index 788):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-b3
+    a3-c2
+    b1-c1
+
+Matching 81 (index 790):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-c1
+    a3-b3
+    b1-c2
+
+Matching 82 (index 791):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-c1
+    a3-c2
+    b1-b3
+
+Matching 83 (index 792):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-c2
+    a3-b1
+    b3-c1
+
+Matching 84 (index 793):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-c2
+    a3-b3
+    b1-c1
+
+Matching 85 (index 796):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-a3
+    b1-c1
+    b2-c2
+
+Matching 86 (index 798):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-b1
+    a3-b2
+    c1-c2
+
+Matching 87 (index 800):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-b1
+    a3-c2
+    b2-c1
+
+Matching 88 (index 802):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-b2
+    a3-c1
+    b1-c2
+
+Matching 89 (index 804):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-c1
+    a3-b1
+    b2-c2
+
+Matching 90 (index 809):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-c2
+    a3-c1
+    b1-b2
+
+Matching 91 (index 810):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-a3
+    b1-b2
+    b3-c2
+
+Matching 92 (index 814):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b1
+    a3-b3
+    b2-c2
+
+Matching 93 (index 815):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b1
+    a3-c2
+    b2-b3
+
+Matching 94 (index 816):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b2
+    a3-b1
+    b3-c2
+
+Matching 95 (index 820):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b3
+    a3-b2
+    b1-c2
+
+Matching 96 (index 823):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-c2
+    a3-b2
+    b1-b3
+
+Matching 97 (index 827):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-a3
+    b1-c1
+    b2-b3
+
+Matching 98 (index 828):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b1
+    a3-b2
+    b3-c1
+
+Matching 99 (index 829):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b1
+    a3-b3
+    b2-c1
+
+Matching 100 (index 833):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b2
+    a3-c1
+    b1-b3
+
+Matching 101 (index 836):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b3
+    a3-c1
+    b1-b2
+
+Matching 102 (index 837):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-c1
+    a3-b1
+    b2-b3
+
+Matching 103 (index 976):
+  RHS edges:
+    t1-a2
+    t2-a3
+    t3-b2
+    a1-b1
+    b3-c2
+    c1-c3
+
+Matching 104 (index 1308):
+  RHS edges:
+    t1-a2
+    t2-b3
+    t3-b2
+    a1-b1
+    a3-c1
+    c2-c3
+
+Matching 105 (index 1415):
+  RHS edges:
+    t1-a2
+    t2-c1
+    t3-b2
+    a1-b1
+    a3-c3
+    b3-c2
+
+Matching 106 (index 1519):
+  RHS edges:
+    t1-a2
+    t2-c2
+    t3-b2
+    a1-b1
+    a3-c1
+    b3-c3
+
+Matching 107 (index 1591):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-a3
+    a1-b1
+    b2-c1
+    b3-c2
+
+Matching 108 (index 1621):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-b2
+    a1-a3
+    b1-c1
+    b3-c2
+
+Matching 109 (index 1623):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-b2
+    a1-b1
+    a3-b3
+    c1-c2
+
+Matching 110 (index 1625):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-b2
+    a1-b1
+    a3-c2
+    b3-c1
+
+Matching 111 (index 1627):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-b2
+    a1-b3
+    a3-c1
+    b1-c2
+
+Matching 112 (index 1629):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-b2
+    a1-c1
+    a3-b1
+    b3-c2
+
+Matching 113 (index 1634):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-b2
+    a1-c2
+    a3-c1
+    b1-b3
+
+Matching 114 (index 1639):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-b3
+    a1-b1
+    a3-c1
+    b2-c2
+
+Matching 115 (index 1653):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-c1
+    a1-b1
+    a3-b2
+    b3-c2
+
+Matching 116 (index 1670):
+  RHS edges:
+    t1-a2
+    t2-c3
+    t3-c2
+    a1-b1
+    a3-c1
+    b2-b3
+
+Matching 117 (index 1823):
+  RHS edges:
+    t1-a3
+    t2-a2
+    t3-b2
+    a1-c1
+    b1-c3
+    b3-c2
+
+Matching 118 (index 1928):
+  RHS edges:
+    t1-a3
+    t2-b1
+    t3-b2
+    a1-c1
+    a2-c3
+    b3-c2
+
+Matching 119 (index 2151):
+  RHS edges:
+    t1-a3
+    t2-b3
+    t3-b2
+    a1-c1
+    a2-b1
+    c2-c3
+
+Matching 120 (index 2364):
+  RHS edges:
+    t1-a3
+    t2-c2
+    t3-b2
+    a1-c1
+    a2-b1
+    b3-c3
+
+Matching 121 (index 2439):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-a2
+    a1-c1
+    b1-b2
+    b3-c2
+
+Matching 122 (index 2454):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b1
+    a1-c1
+    a2-b2
+    b3-c2
+
+Matching 123 (index 2461):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b2
+    a1-a2
+    b1-c1
+    b3-c2
+
+Matching 124 (index 2464):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b2
+    a1-b1
+    a2-c1
+    b3-c2
+
+Matching 125 (index 2466):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b2
+    a1-b3
+    a2-b1
+    c1-c2
+
+Matching 126 (index 2470):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b2
+    a1-c1
+    a2-b3
+    b1-c2
+
+Matching 127 (index 2471):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b2
+    a1-c1
+    a2-c2
+    b1-b3
+
+Matching 128 (index 2472):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b2
+    a1-c2
+    a2-b1
+    b3-c1
+
+Matching 129 (index 2484):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b3
+    a1-c1
+    a2-b1
+    b2-c2
+
+Matching 130 (index 2517):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-c2
+    a1-c1
+    a2-b1
+    b2-b3
+
+Matching 131 (index 2761):
+  RHS edges:
+    t1-b1
+    t2-a3
+    t3-b2
+    a1-a2
+    b3-c2
+    c1-c3
+
+Matching 132 (index 3092):
+  RHS edges:
+    t1-b1
+    t2-c1
+    t3-b2
+    a1-a2
+    a3-c3
+    b3-c2
+
+Matching 133 (index 3196):
+  RHS edges:
+    t1-b1
+    t2-c2
+    t3-b2
+    a1-a2
+    a3-c1
+    b3-c3
+
+Matching 134 (index 3286):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-a3
+    a1-a2
+    b2-c1
+    b3-c2
+
+Matching 135 (index 3300):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b2
+    a1-a2
+    a3-b3
+    c1-c2
+
+Matching 136 (index 3302):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b2
+    a1-a2
+    a3-c2
+    b3-c1
+
+Matching 137 (index 3304):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b2
+    a1-a3
+    a2-c1
+    b3-c2
+
+Matching 138 (index 3308):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b2
+    a1-b3
+    a2-c2
+    a3-c1
+
+Matching 139 (index 3309):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b2
+    a1-c1
+    a2-a3
+    b3-c2
+
+Matching 140 (index 3313):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b2
+    a1-c2
+    a2-b3
+    a3-c1
+
+Matching 141 (index 3316):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b3
+    a1-a2
+    a3-c1
+    b2-c2
+
+Matching 142 (index 3330):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-c1
+    a1-a2
+    a3-b2
+    b3-c2
+
+Matching 143 (index 3347):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-c2
+    a1-a2
+    a3-c1
+    b2-b3
+
+Matching 144 (index 4360):
+  RHS edges:
+    t1-b3
+    t2-a2
+    t3-b2
+    a1-c2
+    a3-c1
+    b1-c3
+
+Matching 145 (index 4464):
+  RHS edges:
+    t1-b3
+    t2-a3
+    t3-b2
+    a1-c2
+    a2-b1
+    c1-c3
+
+Matching 146 (index 4795):
+  RHS edges:
+    t1-b3
+    t2-c1
+    t3-b2
+    a1-c2
+    a2-b1
+    a3-c3
+
+Matching 147 (index 4964):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a2
+    a1-c2
+    a3-c1
+    b1-b2
+
+Matching 148 (index 4977):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a3
+    a1-c2
+    a2-b1
+    b2-c1
+
+Matching 149 (index 4993):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b1
+    a1-c2
+    a2-b2
+    a3-c1
+
+Matching 150 (index 4996):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b2
+    a1-a2
+    a3-c1
+    b1-c2
+
+Matching 151 (index 4998):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b2
+    a1-a3
+    a2-b1
+    c1-c2
+
+Matching 152 (index 5003):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b2
+    a1-b1
+    a2-c2
+    a3-c1
+
+Matching 153 (index 5005):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b2
+    a1-c1
+    a2-b1
+    a3-c2
+
+Matching 154 (index 5007):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b2
+    a1-c2
+    a2-a3
+    b1-c1
+
+Matching 155 (index 5009):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b2
+    a1-c2
+    a2-c1
+    a3-b1
+
+Matching 156 (index 5023):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-c1
+    a1-c2
+    a2-b1
+    a3-b2
+
+Matching 157 (index 5192):
+  RHS edges:
+    t1-c1
+    t2-a2
+    t3-b2
+    a1-a3
+    b1-c3
+    b3-c2
+
+Matching 158 (index 5405):
+  RHS edges:
+    t1-c1
+    t2-b1
+    t3-b2
+    a1-a3
+    a2-c3
+    b3-c2
+
+Matching 159 (index 5628):
+  RHS edges:
+    t1-c1
+    t2-b3
+    t3-b2
+    a1-a3
+    a2-b1
+    c2-c3
+
+Matching 160 (index 5733):
+  RHS edges:
+    t1-c1
+    t2-c2
+    t3-b2
+    a1-a3
+    a2-b1
+    b3-c3
+
+Matching 161 (index 5790):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a2
+    a1-a3
+    b1-b2
+    b3-c2
+
+Matching 162 (index 5823):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b1
+    a1-a3
+    a2-b2
+    b3-c2
+
+Matching 163 (index 5835):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b2
+    a1-a2
+    a3-b1
+    b3-c2
+
+Matching 164 (index 5839):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b2
+    a1-a3
+    a2-b3
+    b1-c2
+
+Matching 165 (index 5840):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b2
+    a1-a3
+    a2-c2
+    b1-b3
+
+Matching 166 (index 5841):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b2
+    a1-b1
+    a2-a3
+    b3-c2
+
+Matching 167 (index 5845):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b2
+    a1-b3
+    a2-b1
+    a3-c2
+
+Matching 168 (index 5848):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b2
+    a1-c2
+    a2-b1
+    a3-b3
+
+Matching 169 (index 5853):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b3
+    a1-a3
+    a2-b1
+    b2-c2
+
+Matching 170 (index 6037):
+  RHS edges:
+    t1-c2
+    t2-a2
+    t3-b2
+    a1-b3
+    a3-c1
+    b1-c3
+
+Matching 171 (index 6141):
+  RHS edges:
+    t1-c2
+    t2-a3
+    t3-b2
+    a1-b3
+    a2-b1
+    c1-c3
+
+Matching 172 (index 6248):
+  RHS edges:
+    t1-c2
+    t2-b1
+    t3-b2
+    a1-b3
+    a2-c3
+    a3-c1
+
+Matching 173 (index 6580):
+  RHS edges:
+    t1-c2
+    t2-c1
+    t3-b2
+    a1-b3
+    a2-b1
+    a3-c3
+
+Matching 174 (index 6641):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a2
+    a1-b3
+    a3-c1
+    b1-b2
+
+Matching 175 (index 6654):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a3
+    a1-b3
+    a2-b1
+    b2-c1
+
+Matching 176 (index 6670):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b1
+    a1-b3
+    a2-b2
+    a3-c1
+
+Matching 177 (index 6677):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b2
+    a1-a2
+    a3-c1
+    b1-b3
+
+Matching 178 (index 6678):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b2
+    a1-a3
+    a2-b1
+    b3-c1
+
+Matching 179 (index 6682):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b2
+    a1-b1
+    a2-b3
+    a3-c1
+
+Matching 180 (index 6684):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b2
+    a1-b3
+    a2-a3
+    b1-c1
+
+Matching 181 (index 6686):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b2
+    a1-b3
+    a2-c1
+    a3-b1
+
+Matching 182 (index 6688):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b2
+    a1-c1
+    a2-b1
+    a3-b3
+
+
+======================================================================
+0-CYCLE SPECIAL MATCHINGS (all t's → same type)
+======================================================================
+Total: 24 matchings
+  Type a: 8
+  Type b: 8
+  Type c: 8
+
+Matching 1 (index 3, type a):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-a3
+    b1-b3
+    b2-c1
+    c2-c3
+
+Matching 2 (index 10, type a):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-a3
+    b1-c2
+    b2-c1
+    b3-c3
+
+Matching 3 (index 12, type a):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-a3
+    b1-c3
+    b2-b3
+    c1-c2
+
+Matching 4 (index 14, type a):
+  RHS edges:
+    t1-a1
+    t2-a2
+    t3-a3
+    b1-c3
+    b2-c2
+    b3-c1
+
+Matching 5 (index 105, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b2
+    b3-c1
+    c2-c3
+
+Matching 6 (index 107, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b2
+    b3-c3
+    c1-c2
+
+Matching 7 (index 109, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b3
+    b2-c2
+    c1-c3
+
+Matching 8 (index 114, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c2
+    b2-b3
+    c1-c3
+
+Matching 9 (index 2986, type b):
+  RHS edges:
+    t1-b1
+    t2-b3
+    t3-b2
+    a1-a2
+    a3-c2
+    c1-c3
+
+Matching 10 (index 2987, type b):
+  RHS edges:
+    t1-b1
+    t2-b3
+    t3-b2
+    a1-a2
+    a3-c3
+    c1-c2
+
+Matching 11 (index 2988, type b):
+  RHS edges:
+    t1-b1
+    t2-b3
+    t3-b2
+    a1-a3
+    a2-c1
+    c2-c3
+
+Matching 12 (index 2991, type b):
+  RHS edges:
+    t1-b1
+    t2-b3
+    t3-b2
+    a1-c1
+    a2-a3
+    c2-c3
+
+Matching 13 (index 4565, type b):
+  RHS edges:
+    t1-b3
+    t2-b1
+    t3-b2
+    a1-a3
+    a2-c3
+    c1-c2
+
+Matching 14 (index 4568, type b):
+  RHS edges:
+    t1-b3
+    t2-b1
+    t3-b2
+    a1-c1
+    a2-c3
+    a3-c2
+
+Matching 15 (index 4569, type b):
+  RHS edges:
+    t1-b3
+    t2-b1
+    t3-b2
+    a1-c2
+    a2-a3
+    c1-c3
+
+Matching 16 (index 4570, type b):
+  RHS edges:
+    t1-b3
+    t2-b1
+    t3-b2
+    a1-c2
+    a2-c1
+    a3-c3
+
+Matching 17 (index 5865, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-a2
+    a3-b1
+    b2-b3
+
+Matching 18 (index 5869, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-a3
+    a2-b2
+    b1-b3
+
+Matching 19 (index 5870, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-a3
+    a2-b3
+    b1-b2
+
+Matching 20 (index 5871, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-b1
+    a2-a3
+    b2-b3
+
+Matching 21 (index 6706, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-a2
+    a3-b2
+    b1-b3
+
+Matching 22 (index 6713, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b1
+    a2-b3
+    a3-b2
+
+Matching 23 (index 6717, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b3
+    a2-a3
+    b1-b2
+
+Matching 24 (index 6719, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b3
+    a2-b2
+    a3-b1
+
+
+
+======================================================================
+======================================================================
+======================================================================
+
+======================================================================
+PILLOW - Untwisted Matchings (No Twist Parameters)
+======================================================================
+
+======================================================================
+1-CYCLE NON-SPECIAL MATCHINGS
+======================================================================
+Total: 180 matchings
+
+Matching 1 (index 146):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b2
+    a2-c2
+    b1-c3
+    b3-c1
+
+Matching 2 (index 158):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-b3
+    a2-c1
+    b1-c3
+    b2-c2
+
+Matching 3 (index 173):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-c1
+    a2-b3
+    b1-c3
+    b2-c2
+
+Matching 4 (index 185):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-c2
+    a2-b2
+    b1-c3
+    b3-c1
+
+Matching 5 (index 210):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-a2
+    a3-b2
+    b3-c1
+    c2-c3
+
+Matching 6 (index 214):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-a2
+    a3-b3
+    b2-c2
+    c1-c3
+
+Matching 7 (index 217):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-a2
+    a3-c1
+    b2-c2
+    b3-c3
+
+Matching 8 (index 221):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-a2
+    a3-c2
+    b2-c3
+    b3-c1
+
+Matching 9 (index 222):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-a2
+    a3-c3
+    b2-b3
+    c1-c2
+
+Matching 10 (index 223):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-a2
+    a3-c3
+    b2-c1
+    b3-c2
+
+Matching 11 (index 251):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b2
+    a2-c2
+    a3-c3
+    b3-c1
+
+Matching 12 (index 263):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-b3
+    a2-c1
+    a3-c3
+    b2-c2
+
+Matching 13 (index 278):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-c1
+    a2-b3
+    a3-c3
+    b2-c2
+
+Matching 14 (index 290):
+  RHS edges:
+    t1-a1
+    t2-b1
+    t3-c2
+    a2-b2
+    a3-c3
+    b3-c1
+
+Matching 15 (index 316):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-a2
+    a3-b1
+    b3-c2
+    c1-c3
+
+Matching 16 (index 317):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-a2
+    a3-b1
+    b3-c3
+    c1-c2
+
+Matching 17 (index 318):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-a2
+    a3-b3
+    b1-c1
+    c2-c3
+
+Matching 18 (index 321):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-a2
+    a3-c1
+    b1-b3
+    c2-c3
+
+Matching 19 (index 326):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-a2
+    a3-c2
+    b1-c3
+    b3-c1
+
+Matching 20 (index 329):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-a2
+    a3-c3
+    b1-c2
+    b3-c1
+
+Matching 21 (index 330):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-a3
+    a2-b1
+    b3-c1
+    c2-c3
+
+Matching 22 (index 345):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-b1
+    a2-a3
+    b3-c1
+    c2-c3
+
+Matching 23 (index 366):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-b3
+    a2-c1
+    a3-b1
+    c2-c3
+
+Matching 24 (index 381):
+  RHS edges:
+    t1-a1
+    t2-b2
+    t3-c1
+    a2-b3
+    a3-b1
+    c2-c3
+
+Matching 25 (index 420):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a2
+    a3-b1
+    b2-c1
+    c2-c3
+
+Matching 26 (index 422):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a2
+    a3-b1
+    b2-c3
+    c1-c2
+
+Matching 27 (index 424):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a2
+    a3-b2
+    b1-c2
+    c1-c3
+
+Matching 28 (index 428):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a2
+    a3-c1
+    b1-c3
+    b2-c2
+
+Matching 29 (index 429):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a2
+    a3-c2
+    b1-b2
+    c1-c3
+
+Matching 30 (index 433):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a2
+    a3-c3
+    b1-c1
+    b2-c2
+
+Matching 31 (index 436):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-a3
+    a2-b1
+    b2-c2
+    c1-c3
+
+Matching 32 (index 451):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b1
+    a2-a3
+    b2-c2
+    c1-c3
+
+Matching 33 (index 474):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-b2
+    a2-c2
+    a3-b1
+    c1-c3
+
+Matching 34 (index 501):
+  RHS edges:
+    t1-a1
+    t2-b3
+    t3-c2
+    a2-b2
+    a3-b1
+    c1-c3
+
+Matching 35 (index 525):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a2
+    a3-b1
+    b2-b3
+    c2-c3
+
+Matching 36 (index 527):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a2
+    a3-b1
+    b2-c3
+    b3-c2
+
+Matching 37 (index 529):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a2
+    a3-b2
+    b1-c2
+    b3-c3
+
+Matching 38 (index 533):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a2
+    a3-b3
+    b1-c3
+    b2-c2
+
+Matching 39 (index 534):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a2
+    a3-c2
+    b1-b2
+    b3-c3
+
+Matching 40 (index 538):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a2
+    a3-c3
+    b1-b3
+    b2-c2
+
+Matching 41 (index 541):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-a3
+    a2-b1
+    b2-c2
+    b3-c3
+
+Matching 42 (index 556):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b1
+    a2-a3
+    b2-c2
+    b3-c3
+
+Matching 43 (index 579):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-b2
+    a2-c2
+    a3-b1
+    b3-c3
+
+Matching 44 (index 606):
+  RHS edges:
+    t1-a1
+    t2-c1
+    t3-c2
+    a2-b2
+    a3-b1
+    b3-c3
+
+Matching 45 (index 630):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a2
+    a3-b1
+    b2-b3
+    c1-c3
+
+Matching 46 (index 631):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a2
+    a3-b1
+    b2-c1
+    b3-c3
+
+Matching 47 (index 635):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a2
+    a3-b2
+    b1-c3
+    b3-c1
+
+Matching 48 (index 637):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a2
+    a3-b3
+    b1-c1
+    b2-c3
+
+Matching 49 (index 640):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a2
+    a3-c1
+    b1-b3
+    b2-c3
+
+Matching 50 (index 642):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a2
+    a3-c3
+    b1-b2
+    b3-c1
+
+Matching 51 (index 647):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-a3
+    a2-b1
+    b2-c3
+    b3-c1
+
+Matching 52 (index 662):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b1
+    a2-a3
+    b2-c3
+    b3-c1
+
+Matching 53 (index 699):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-b3
+    a2-c1
+    a3-b1
+    b2-c3
+
+Matching 54 (index 714):
+  RHS edges:
+    t1-a1
+    t2-c2
+    t3-c1
+    a2-b3
+    a3-b1
+    b2-c3
+
+Matching 55 (index 738):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-b2
+    b1-b3
+    c1-c2
+
+Matching 56 (index 739):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-b2
+    b1-c1
+    b3-c2
+
+Matching 57 (index 741):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-b3
+    b1-b2
+    c1-c2
+
+Matching 58 (index 743):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-b3
+    b1-c2
+    b2-c1
+
+Matching 59 (index 744):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-c1
+    b1-b2
+    b3-c2
+
+Matching 60 (index 746):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-c1
+    b1-c2
+    b2-b3
+
+Matching 61 (index 748):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-c2
+    b1-b3
+    b2-c1
+
+Matching 62 (index 749):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a2
+    a3-c2
+    b1-c1
+    b2-b3
+
+Matching 63 (index 750):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b1
+    b2-b3
+    c1-c2
+
+Matching 64 (index 751):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b1
+    b2-c1
+    b3-c2
+
+Matching 65 (index 755):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b2
+    b1-c2
+    b3-c1
+
+Matching 66 (index 757):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-b3
+    b1-c1
+    b2-c2
+
+Matching 67 (index 760):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-c1
+    b1-b3
+    b2-c2
+
+Matching 68 (index 762):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-a3
+    a2-c2
+    b1-b2
+    b3-c1
+
+Matching 69 (index 765):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-a3
+    b2-b3
+    c1-c2
+
+Matching 70 (index 766):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-a3
+    b2-c1
+    b3-c2
+
+Matching 71 (index 770):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-b2
+    a3-c2
+    b3-c1
+
+Matching 72 (index 772):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-b3
+    a3-c1
+    b2-c2
+
+Matching 73 (index 775):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-c1
+    a3-b3
+    b2-c2
+
+Matching 74 (index 777):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b1
+    a2-c2
+    a3-b2
+    b3-c1
+
+Matching 75 (index 782):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-a3
+    b1-c2
+    b3-c1
+
+Matching 76 (index 785):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-b1
+    a3-c2
+    b3-c1
+
+Matching 77 (index 786):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-b3
+    a3-b1
+    c1-c2
+
+Matching 78 (index 789):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-c1
+    a3-b1
+    b3-c2
+
+Matching 79 (index 793):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-c2
+    a3-b3
+    b1-c1
+
+Matching 80 (index 794):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b2
+    a2-c2
+    a3-c1
+    b1-b3
+
+Matching 81 (index 796):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-a3
+    b1-c1
+    b2-c2
+
+Matching 82 (index 799):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-b1
+    a3-c1
+    b2-c2
+
+Matching 83 (index 801):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-b2
+    a3-b1
+    c1-c2
+
+Matching 84 (index 805):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-c1
+    a3-b2
+    b1-c2
+
+Matching 85 (index 806):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-c1
+    a3-c2
+    b1-b2
+
+Matching 86 (index 807):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-b3
+    a2-c2
+    a3-b1
+    b2-c1
+
+Matching 87 (index 811):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-a3
+    b1-b3
+    b2-c2
+
+Matching 88 (index 814):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b1
+    a3-b3
+    b2-c2
+
+Matching 89 (index 816):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b2
+    a3-b1
+    b3-c2
+
+Matching 90 (index 820):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b3
+    a3-b2
+    b1-c2
+
+Matching 91 (index 821):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-b3
+    a3-c2
+    b1-b2
+
+Matching 92 (index 822):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c1
+    a2-c2
+    a3-b1
+    b2-b3
+
+Matching 93 (index 825):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-a3
+    b1-b2
+    b3-c1
+
+Matching 94 (index 828):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b1
+    a3-b2
+    b3-c1
+
+Matching 95 (index 832):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b2
+    a3-b3
+    b1-c1
+
+Matching 96 (index 833):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b2
+    a3-c1
+    b1-b3
+
+Matching 97 (index 834):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-b3
+    a3-b1
+    b2-c1
+
+Matching 98 (index 837):
+  RHS edges:
+    t1-a1
+    t2-c3
+    t3-c2
+    a2-c1
+    a3-b1
+    b2-b3
+
+Matching 99 (index 2010):
+  RHS edges:
+    t1-a3
+    t2-b2
+    t3-a2
+    a1-b1
+    b3-c1
+    c2-c3
+
+Matching 100 (index 2116):
+  RHS edges:
+    t1-a3
+    t2-b3
+    t3-a2
+    a1-b1
+    b2-c2
+    c1-c3
+
+Matching 101 (index 2221):
+  RHS edges:
+    t1-a3
+    t2-c1
+    t3-a2
+    a1-b1
+    b2-c2
+    b3-c3
+
+Matching 102 (index 2327):
+  RHS edges:
+    t1-a3
+    t2-c2
+    t3-a2
+    a1-b1
+    b2-c3
+    b3-c1
+
+Matching 103 (index 2430):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-a2
+    a1-b1
+    b2-b3
+    c1-c2
+
+Matching 104 (index 2431):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-a2
+    a1-b1
+    b2-c1
+    b3-c2
+
+Matching 105 (index 2435):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-a2
+    a1-b2
+    b1-c2
+    b3-c1
+
+Matching 106 (index 2437):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-a2
+    a1-b3
+    b1-c1
+    b2-c2
+
+Matching 107 (index 2440):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-a2
+    a1-c1
+    b1-b3
+    b2-c2
+
+Matching 108 (index 2442):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-a2
+    a1-c2
+    b1-b2
+    b3-c1
+
+Matching 109 (index 2465):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b2
+    a1-b1
+    a2-c2
+    b3-c1
+
+Matching 110 (index 2479):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-b3
+    a1-b1
+    a2-c1
+    b2-c2
+
+Matching 111 (index 2494):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-c1
+    a1-b1
+    a2-b3
+    b2-c2
+
+Matching 112 (index 2508):
+  RHS edges:
+    t1-a3
+    t2-c3
+    t3-c2
+    a1-b1
+    a2-b2
+    b3-c1
+
+Matching 113 (index 2850):
+  RHS edges:
+    t1-b1
+    t2-b2
+    t3-a2
+    a1-a3
+    b3-c1
+    c2-c3
+
+Matching 114 (index 2956):
+  RHS edges:
+    t1-b1
+    t2-b3
+    t3-a2
+    a1-a3
+    b2-c2
+    c1-c3
+
+Matching 115 (index 3061):
+  RHS edges:
+    t1-b1
+    t2-c1
+    t3-a2
+    a1-a3
+    b2-c2
+    b3-c3
+
+Matching 116 (index 3167):
+  RHS edges:
+    t1-b1
+    t2-c2
+    t3-a2
+    a1-a3
+    b2-c3
+    b3-c1
+
+Matching 117 (index 3270):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-a2
+    a1-a3
+    b2-b3
+    c1-c2
+
+Matching 118 (index 3271):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-a2
+    a1-a3
+    b2-c1
+    b3-c2
+
+Matching 119 (index 3275):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-a2
+    a1-b2
+    a3-c2
+    b3-c1
+
+Matching 120 (index 3277):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-a2
+    a1-b3
+    a3-c1
+    b2-c2
+
+Matching 121 (index 3280):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-a2
+    a1-c1
+    a3-b3
+    b2-c2
+
+Matching 122 (index 3282):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-a2
+    a1-c2
+    a3-b2
+    b3-c1
+
+Matching 123 (index 3305):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b2
+    a1-a3
+    a2-c2
+    b3-c1
+
+Matching 124 (index 3319):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-b3
+    a1-a3
+    a2-c1
+    b2-c2
+
+Matching 125 (index 3334):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-c1
+    a1-a3
+    a2-b3
+    b2-c2
+
+Matching 126 (index 3348):
+  RHS edges:
+    t1-b1
+    t2-c3
+    t3-c2
+    a1-a3
+    a2-b2
+    b3-c1
+
+Matching 127 (index 3596):
+  RHS edges:
+    t1-b2
+    t2-a3
+    t3-a2
+    a1-c2
+    b1-c3
+    b3-c1
+
+Matching 128 (index 3701):
+  RHS edges:
+    t1-b2
+    t2-b1
+    t3-a2
+    a1-c2
+    a3-c3
+    b3-c1
+
+Matching 129 (index 3804):
+  RHS edges:
+    t1-b2
+    t2-b3
+    t3-a2
+    a1-c2
+    a3-b1
+    c1-c3
+
+Matching 130 (index 3909):
+  RHS edges:
+    t1-b2
+    t2-c1
+    t3-a2
+    a1-c2
+    a3-b1
+    b3-c3
+
+Matching 131 (index 4112):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-a2
+    a1-a3
+    b1-c2
+    b3-c1
+
+Matching 132 (index 4115):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-a2
+    a1-b1
+    a3-c2
+    b3-c1
+
+Matching 133 (index 4116):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-a2
+    a1-b3
+    a3-b1
+    c1-c2
+
+Matching 134 (index 4119):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-a2
+    a1-c1
+    a3-b1
+    b3-c2
+
+Matching 135 (index 4123):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-a2
+    a1-c2
+    a3-b3
+    b1-c1
+
+Matching 136 (index 4124):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-a2
+    a1-c2
+    a3-c1
+    b1-b3
+
+Matching 137 (index 4137):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-a3
+    a1-c2
+    a2-b1
+    b3-c1
+
+Matching 138 (index 4152):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-b1
+    a1-c2
+    a2-a3
+    b3-c1
+
+Matching 139 (index 4169):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-b3
+    a1-c2
+    a2-c1
+    a3-b1
+
+Matching 140 (index 4184):
+  RHS edges:
+    t1-b2
+    t2-c3
+    t3-c1
+    a1-c2
+    a2-b3
+    a3-b1
+
+Matching 141 (index 4433):
+  RHS edges:
+    t1-b3
+    t2-a3
+    t3-a2
+    a1-c1
+    b1-c3
+    b2-c2
+
+Matching 142 (index 4538):
+  RHS edges:
+    t1-b3
+    t2-b1
+    t3-a2
+    a1-c1
+    a3-c3
+    b2-c2
+
+Matching 143 (index 4641):
+  RHS edges:
+    t1-b3
+    t2-b2
+    t3-a2
+    a1-c1
+    a3-b1
+    c2-c3
+
+Matching 144 (index 4854):
+  RHS edges:
+    t1-b3
+    t2-c2
+    t3-a2
+    a1-c1
+    a3-b1
+    b2-c3
+
+Matching 145 (index 4951):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a2
+    a1-a3
+    b1-c1
+    b2-c2
+
+Matching 146 (index 4954):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a2
+    a1-b1
+    a3-c1
+    b2-c2
+
+Matching 147 (index 4956):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a2
+    a1-b2
+    a3-b1
+    c1-c2
+
+Matching 148 (index 4960):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a2
+    a1-c1
+    a3-b2
+    b1-c2
+
+Matching 149 (index 4961):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a2
+    a1-c1
+    a3-c2
+    b1-b2
+
+Matching 150 (index 4962):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a2
+    a1-c2
+    a3-b1
+    b2-c1
+
+Matching 151 (index 4974):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-a3
+    a1-c1
+    a2-b1
+    b2-c2
+
+Matching 152 (index 4989):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b1
+    a1-c1
+    a2-a3
+    b2-c2
+
+Matching 153 (index 5006):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-b2
+    a1-c1
+    a2-c2
+    a3-b1
+
+Matching 154 (index 5039):
+  RHS edges:
+    t1-b3
+    t2-c3
+    t3-c2
+    a1-c1
+    a2-b2
+    a3-b1
+
+Matching 155 (index 5273):
+  RHS edges:
+    t1-c1
+    t2-a3
+    t3-a2
+    a1-b3
+    b1-c3
+    b2-c2
+
+Matching 156 (index 5378):
+  RHS edges:
+    t1-c1
+    t2-b1
+    t3-a2
+    a1-b3
+    a3-c3
+    b2-c2
+
+Matching 157 (index 5481):
+  RHS edges:
+    t1-c1
+    t2-b2
+    t3-a2
+    a1-b3
+    a3-b1
+    c2-c3
+
+Matching 158 (index 5694):
+  RHS edges:
+    t1-c1
+    t2-c2
+    t3-a2
+    a1-b3
+    a3-b1
+    b2-c3
+
+Matching 159 (index 5791):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a2
+    a1-a3
+    b1-b3
+    b2-c2
+
+Matching 160 (index 5794):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a2
+    a1-b1
+    a3-b3
+    b2-c2
+
+Matching 161 (index 5796):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a2
+    a1-b2
+    a3-b1
+    b3-c2
+
+Matching 162 (index 5800):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a2
+    a1-b3
+    a3-b2
+    b1-c2
+
+Matching 163 (index 5801):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a2
+    a1-b3
+    a3-c2
+    b1-b2
+
+Matching 164 (index 5802):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a2
+    a1-c2
+    a3-b1
+    b2-b3
+
+Matching 165 (index 5814):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-a3
+    a1-b3
+    a2-b1
+    b2-c2
+
+Matching 166 (index 5829):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b1
+    a1-b3
+    a2-a3
+    b2-c2
+
+Matching 167 (index 5846):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-b2
+    a1-b3
+    a2-c2
+    a3-b1
+
+Matching 168 (index 6110):
+  RHS edges:
+    t1-c2
+    t2-a3
+    t3-a2
+    a1-b2
+    b1-c3
+    b3-c1
+
+Matching 169 (index 6215):
+  RHS edges:
+    t1-c2
+    t2-b1
+    t3-a2
+    a1-b2
+    a3-c3
+    b3-c1
+
+Matching 170 (index 6426):
+  RHS edges:
+    t1-c2
+    t2-b3
+    t3-a2
+    a1-b2
+    a3-b1
+    c1-c3
+
+Matching 171 (index 6531):
+  RHS edges:
+    t1-c2
+    t2-c1
+    t3-a2
+    a1-b2
+    a3-b1
+    b3-c3
+
+Matching 172 (index 6630):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a2
+    a1-a3
+    b1-b2
+    b3-c1
+
+Matching 173 (index 6633):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a2
+    a1-b1
+    a3-b2
+    b3-c1
+
+Matching 174 (index 6637):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a2
+    a1-b2
+    a3-b3
+    b1-c1
+
+Matching 175 (index 6638):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a2
+    a1-b2
+    a3-c1
+    b1-b3
+
+Matching 176 (index 6639):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a2
+    a1-b3
+    a3-b1
+    b2-c1
+
+Matching 177 (index 6642):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a2
+    a1-c1
+    a3-b1
+    b2-b3
+
+Matching 178 (index 6651):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-a3
+    a1-b2
+    a2-b1
+    b3-c1
+
+Matching 179 (index 6666):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b1
+    a1-b2
+    a2-a3
+    b3-c1
+
+Matching 180 (index 6701):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-b3
+    a1-b2
+    a2-c1
+    a3-b1
+
+
+======================================================================
+0-CYCLE SPECIAL MATCHINGS (all t's → same type)
+======================================================================
+Total: 22 matchings
+  Type a: 8
+  Type b: 6
+  Type c: 8
+
+Matching 1 (index 106, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b2
+    b3-c2
+    c1-c3
+
+Matching 2 (index 107, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b2
+    b3-c3
+    c1-c2
+
+Matching 3 (index 108, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b3
+    b2-c1
+    c2-c3
+
+Matching 4 (index 110, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-b3
+    b2-c3
+    c1-c2
+
+Matching 5 (index 111, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c1
+    b2-b3
+    c2-c3
+
+Matching 6 (index 113, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c1
+    b2-c3
+    b3-c2
+
+Matching 7 (index 114, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c2
+    b2-b3
+    c1-c3
+
+Matching 8 (index 115, type a):
+  RHS edges:
+    t1-a1
+    t2-a3
+    t3-a2
+    b1-c2
+    b2-c1
+    b3-c3
+
+Matching 9 (index 2883, type b):
+  RHS edges:
+    t1-b1
+    t2-b2
+    t3-b3
+    a1-a3
+    a2-c1
+    c2-c3
+
+Matching 10 (index 2989, type b):
+  RHS edges:
+    t1-b1
+    t2-b3
+    t3-b2
+    a1-a3
+    a2-c2
+    c1-c3
+
+Matching 11 (index 3730, type b):
+  RHS edges:
+    t1-b2
+    t2-b1
+    t3-b3
+    a1-c2
+    a2-c1
+    a3-c3
+
+Matching 12 (index 3834, type b):
+  RHS edges:
+    t1-b2
+    t2-b3
+    t3-b1
+    a1-c2
+    a2-a3
+    c1-c3
+
+Matching 13 (index 4567, type b):
+  RHS edges:
+    t1-b3
+    t2-b1
+    t3-b2
+    a1-c1
+    a2-c2
+    a3-c3
+
+Matching 14 (index 4671, type b):
+  RHS edges:
+    t1-b3
+    t2-b2
+    t3-b1
+    a1-c1
+    a2-a3
+    c2-c3
+
+Matching 15 (index 5869, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-a3
+    a2-b2
+    b1-b3
+
+Matching 16 (index 5872, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-b1
+    a2-b2
+    a3-b3
+
+Matching 17 (index 5877, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-b3
+    a2-a3
+    b1-b2
+
+Matching 18 (index 5878, type c):
+  RHS edges:
+    t1-c1
+    t2-c3
+    t3-c2
+    a1-b3
+    a2-b1
+    a3-b2
+
+Matching 19 (index 6710, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-a3
+    a2-b3
+    b1-b2
+
+Matching 20 (index 6713, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b1
+    a2-b3
+    a3-b2
+
+Matching 21 (index 6714, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b2
+    a2-a3
+    b1-b3
+
+Matching 22 (index 6715, type c):
+  RHS edges:
+    t1-c2
+    t2-c3
+    t3-c1
+    a1-b2
+    a2-b1
+    a3-b3
+

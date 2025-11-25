@@ -6,7 +6,8 @@
       "Bash(SDcountnlo_results.txt)",
       "Bash(cat:*)",
       "Bash(pkill:*)",
-      "Bash(tee:*)"
+      "Bash(tee:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

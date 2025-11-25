@@ -1,0 +1,63 @@
+PILLOW - s2-t3 Path with >1 Cycles After Merging
+======================================================================
+
+Total: 14 matchings
+
+Matching 1 - 1-cycle non-special (idx 755)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-b2, b1-c2, b3-c1
+
+Matching 2 - 1-cycle non-special (idx 757)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-b3, b1-c1, b2-c2
+
+Matching 3 - 1-cycle non-special (idx 760)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-c1, b1-b3, b2-c2
+
+Matching 4 - 1-cycle non-special (idx 762)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-c2, b1-b2, b3-c1
+
+Matching 5 - 1-cycle non-special (idx 782)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-a3, b1-c2, b3-c1
+
+Matching 6 - 1-cycle non-special (idx 786)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-b3, a3-b1, c1-c2
+
+Matching 7 - 1-cycle non-special (idx 796)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-a3, b1-c1, b2-c2
+
+Matching 8 - 1-cycle non-special (idx 801)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-b2, a3-b1, c1-c2
+
+Matching 9 - 1-cycle non-special (idx 811)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-c1, a2-a3, b1-b3, b2-c2
+
+Matching 10 - 1-cycle non-special (idx 822)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-c1, a2-c2, a3-b1, b2-b3
+
+Matching 11 - 1-cycle non-special (idx 825)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-c2, a2-a3, b1-b2, b3-c1
+
+Matching 12 - 1-cycle non-special (idx 837)
+  Cycles in s2-t3: 2
+  RHS edges: t1-a1, t2-c3, t3-c2, a2-c1, a3-b1, b2-b3
+
+Matching 13 - 0-cycle special (idx 5877)
+  Type: all t→c
+  Cycles in s2-t3: 2
+  RHS edges: t1-c1, t2-c3, t3-c2, a1-b3, a2-a3, b1-b2
+
+Matching 14 - 0-cycle special (idx 6714)
+  Type: all t→c
+  Cycles in s2-t3: 2
+  RHS edges: t1-c2, t2-c3, t3-c1, a1-b2, a2-a3, b1-b3
+
