@@ -1,0 +1,131 @@
+================================================================
+Comparison of ALL SDcountnlo Versions (v2, v3, v4, v5, v6)
+================================================================
+
+VERSION OVERVIEW:
+-----------------
+
+v2: Check s2-t3 path only, merge vertices (a,b,c)
+v3: Check ALL three paths (s1-t1, s2-t3, s3-t2), merge vertices (a,b,c)
+v4: Check ALL three paths, merge vertices AND split a-c edges
+v5: Check s2-t3 path only, merge vertices AND split a-c edges
+v6: Check s3-t2 path only, merge vertices AND split a-c edges
+
+PROCESSING STEPS:
+-----------------
+
+All versions:
+1. Find 1-cycle non-special and 0-cycle special matchings with NLO pairing
+2. Remove cycles from original graph
+3. Extract paths
+
+v2 & v5: Extract s2-t3 path only
+v6:      Extract s3-t2 path only
+v3 & v4: Extract all three paths (s1-t1, s2-t3, s3-t2)
+
+All versions:
+4. Merge vertices: a1,a2,a3→a; b1,b2,b3→b; c1,c2,c3→c
+
+v4, v5, v6: 
+5. Split a-c edges: each a-c edge becomes a-b and b-c
+
+All versions:
+6. Count cycles (excluding self-loops)
+7. Keep matchings with >=1 cycles
+
+================================================================
+RESULTS SUMMARY:
+================================================================
+
+6J Configuration:
+-----------------
+v2 (s2-t3 only, no split):           48 total (37 non-special + 11 special)
+v3 (all paths, no split):           135 total (117 non-special + 18 special)
+v4 (all paths, with split):         169 total (145 non-special + 24 special)
+v5 (s2-t3 only, with split):         74 total (62 non-special + 12 special)
+v6 (s3-t2 only, with split):         61 total (52 non-special + 9 special)
+
+PILLOW Configuration:
+---------------------
+v2 (s2-t3 only, no split):           45 total (39 non-special + 6 special)
+v3 (all paths, no split):           112 total (100 non-special + 12 special)
+v4 (all paths, with split):         154 total (136 non-special + 18 special)
+v5 (s2-t3 only, with split):         58 total (52 non-special + 6 special)
+v6 (s3-t2 only, with split):         60 total (50 non-special + 10 special)
+
+================================================================
+SINGLE PATH COMPARISON (s2-t3 vs s3-t2):
+================================================================
+
+6J:
+  s2-t3 (v5): 74 total (62 non-special + 12 special)
+  s3-t2 (v6): 61 total (52 non-special + 9 special)
+  
+PILLOW:
+  s2-t3 (v5): 58 total (52 non-special + 6 special)
+  s3-t2 (v6): 60 total (50 non-special + 10 special)
+
+Observation: For 6J, s2-t3 has more cycles. For PILLOW, they're almost equal.
+
+================================================================
+IMPACT OF CHANGES:
+================================================================
+
+Effect of checking ALL paths (v2→v3):
+  6J:    48 → 135 (+87, +181%)
+  PILLOW: 45 → 112 (+67, +149%)
+
+Effect of a-c splitting on ALL paths (v3→v4):
+  6J:    135 → 169 (+34, +25%)
+  PILLOW: 112 → 154 (+42, +38%)
+
+Effect of a-c splitting on s2-t3 only (v2→v5):
+  6J:     48 → 74 (+26, +54%)
+  PILLOW:  45 → 58 (+13, +29%)
+
+================================================================
+KEY INSIGHTS:
+================================================================
+
+1. Checking all three paths (v2→v3) has the largest impact, roughly 
+   doubling or tripling the number of matchings with cycles.
+
+2. The a-c edge splitting (v3→v4, v2→v5) creates additional cycles
+   by inserting b as intermediate vertex, increasing results by 25-54%.
+
+3. The split creates cycles when:
+   - Original path has a-c edge
+   - After splitting to a-b-c, if b-c or a-b already exists → parallel edges
+
+4. Different paths (s2-t3 vs s3-t2) can have different cycle counts:
+   - 6J favors s2-t3 path (74 vs 61)
+   - PILLOW shows near parity (58 vs 60)
+
+5. Special matchings (all t's → same type) show similar relative increases
+   across all transformations.
+
+================================================================
+OUTPUT DIRECTORIES:
+================================================================
+
+nlo_v2_results/6J/        nlo_v2_results/PILLOW/
+nlo_v3_results/6J/        nlo_v3_results/PILLOW/
+nlo_v4_results/6J/        nlo_v4_results/PILLOW/
+nlo_v5_results/6J/        nlo_v5_results/PILLOW/
+nlo_v6_results/6J/        nlo_v6_results/PILLOW/
+
+Each contains:
+- summary.txt: Text summary of all matchings
+- drawings/: PNG visualizations of all matchings
+
+================================================================
+DRAWING STYLES:
+================================================================
+
+v2: LEFT=Complete graph (s2-t3 highlighted), RIGHT=Merged s2-t3 path
+v3: LEFT=Complete graph (3 paths color-coded), RIGHT=Paths with cycles
+v4: LEFT=Complete graph (3 paths color-coded), RIGHT=Split paths with cycles
+v5: LEFT=Complete graph (s2-t3 highlighted), RIGHT=Merged+split s2-t3 path
+v6: LEFT=Complete graph (s3-t2 highlighted), RIGHT=Merged+split s3-t2 path
+
+================================================================
