@@ -1,0 +1,1101 @@
+PILLOW - ANY Path with >=1 Cycles After Merging+Splitting a-c
+======================================================================
+
+Total: 154 matchings
+
+Matching 1 - 1-cycle non-special (idx 146)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-b2, a2-c2, b1-c3, b3-c1
+
+Matching 2 - 1-cycle non-special (idx 158)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-b3, a2-c1, b1-c3, b2-c2
+
+Matching 3 - 1-cycle non-special (idx 210)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b1, t3-a2, a3-b2, b3-c1, c2-c3
+
+Matching 4 - 1-cycle non-special (idx 214)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b1, t3-a2, a3-b3, b2-c2, c1-c3
+
+Matching 5 - 1-cycle non-special (idx 217)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b1, t3-a2, a3-c1, b2-c2, b3-c3
+
+Matching 6 - 1-cycle non-special (idx 221)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b1, t3-a2, a3-c2, b2-c3, b3-c1
+
+Matching 7 - 1-cycle non-special (idx 222)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b1, t3-a2, a3-c3, b2-b3, c1-c2
+
+Matching 8 - 1-cycle non-special (idx 223)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b1, t3-a2, a3-c3, b2-c1, b3-c2
+
+Matching 9 - 1-cycle non-special (idx 251)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b1, t3-b2, a2-c2, a3-c3, b3-c1
+
+Matching 10 - 1-cycle non-special (idx 263)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b1, t3-b3, a2-c1, a3-c3, b2-c2
+
+Matching 11 - 1-cycle non-special (idx 278)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b1, t3-c1, a2-b3, a3-c3, b2-c2
+
+Matching 12 - 1-cycle non-special (idx 290)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b1, t3-c2, a2-b2, a3-c3, b3-c1
+
+Matching 13 - 1-cycle non-special (idx 316)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b2, t3-a2, a3-b1, b3-c2, c1-c3
+
+Matching 14 - 1-cycle non-special (idx 317)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b2, t3-a2, a3-b1, b3-c3, c1-c2
+
+Matching 15 - 1-cycle non-special (idx 326)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b2, t3-a2, a3-c2, b1-c3, b3-c1
+
+Matching 16 - 1-cycle non-special (idx 329)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b2, t3-a2, a3-c3, b1-c2, b3-c1
+
+Matching 17 - 1-cycle non-special (idx 330)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b2, t3-a3, a2-b1, b3-c1, c2-c3
+
+Matching 18 - 1-cycle non-special (idx 366)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b2, t3-b3, a2-c1, a3-b1, c2-c3
+
+Matching 19 - 1-cycle non-special (idx 420)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b3, t3-a2, a3-b1, b2-c1, c2-c3
+
+Matching 20 - 1-cycle non-special (idx 422)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b3, t3-a2, a3-b1, b2-c3, c1-c2
+
+Matching 21 - 1-cycle non-special (idx 428)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b3, t3-a2, a3-c1, b1-c3, b2-c2
+
+Matching 22 - 1-cycle non-special (idx 433)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-b3, t3-a2, a3-c3, b1-c1, b2-c2
+
+Matching 23 - 1-cycle non-special (idx 436)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b3, t3-a3, a2-b1, b2-c2, c1-c3
+
+Matching 24 - 1-cycle non-special (idx 474)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-b3, t3-b2, a2-c2, a3-b1, c1-c3
+
+Matching 25 - 1-cycle non-special (idx 525)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c1, t3-a2, a3-b1, b2-b3, c2-c3
+
+Matching 26 - 1-cycle non-special (idx 527)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c1, t3-a2, a3-b1, b2-c3, b3-c2
+
+Matching 27 - 1-cycle non-special (idx 529)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c1, t3-a2, a3-b2, b1-c2, b3-c3
+
+Matching 28 - 1-cycle non-special (idx 533)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c1, t3-a2, a3-b3, b1-c3, b2-c2
+
+Matching 29 - 1-cycle non-special (idx 534)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c1, t3-a2, a3-c2, b1-b2, b3-c3
+
+Matching 30 - 1-cycle non-special (idx 538)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c1, t3-a2, a3-c3, b1-b3, b2-c2
+
+Matching 31 - 1-cycle non-special (idx 541)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c1, t3-a3, a2-b1, b2-c2, b3-c3
+
+Matching 32 - 1-cycle non-special (idx 556)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c1, t3-b1, a2-a3, b2-c2, b3-c3
+
+Matching 33 - 1-cycle non-special (idx 579)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c1, t3-b2, a2-c2, a3-b1, b3-c3
+
+Matching 34 - 1-cycle non-special (idx 606)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c1, t3-c2, a2-b2, a3-b1, b3-c3
+
+Matching 35 - 1-cycle non-special (idx 630)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c2, t3-a2, a3-b1, b2-b3, c1-c3
+
+Matching 36 - 1-cycle non-special (idx 631)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c2, t3-a2, a3-b1, b2-c1, b3-c3
+
+Matching 37 - 1-cycle non-special (idx 635)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c2, t3-a2, a3-b2, b1-c3, b3-c1
+
+Matching 38 - 1-cycle non-special (idx 637)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c2, t3-a2, a3-b3, b1-c1, b2-c3
+
+Matching 39 - 1-cycle non-special (idx 640)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c2, t3-a2, a3-c1, b1-b3, b2-c3
+
+Matching 40 - 1-cycle non-special (idx 642)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 2
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c2, t3-a2, a3-c3, b1-b2, b3-c1
+
+Matching 41 - 1-cycle non-special (idx 647)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c2, t3-a3, a2-b1, b2-c3, b3-c1
+
+Matching 42 - 1-cycle non-special (idx 662)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c2, t3-b1, a2-a3, b2-c3, b3-c1
+
+Matching 43 - 1-cycle non-special (idx 699)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c2, t3-b3, a2-c1, a3-b1, b2-c3
+
+Matching 44 - 1-cycle non-special (idx 714)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c2, t3-c1, a2-b3, a3-b1, b2-c3
+
+Matching 45 - 1-cycle non-special (idx 750)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-b1, b2-b3, c1-c2
+
+Matching 46 - 1-cycle non-special (idx 751)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-b1, b2-c1, b3-c2
+
+Matching 47 - 1-cycle non-special (idx 755)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-b2, b1-c2, b3-c1
+
+Matching 48 - 1-cycle non-special (idx 757)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-b3, b1-c1, b2-c2
+
+Matching 49 - 1-cycle non-special (idx 760)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-c1, b1-b3, b2-c2
+
+Matching 50 - 1-cycle non-special (idx 762)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-a3, a2-c2, b1-b2, b3-c1
+
+Matching 51 - 1-cycle non-special (idx 770)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-b1, a2-b2, a3-c2, b3-c1
+
+Matching 52 - 1-cycle non-special (idx 772)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-b1, a2-b3, a3-c1, b2-c2
+
+Matching 53 - 1-cycle non-special (idx 775)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-b1, a2-c1, a3-b3, b2-c2
+
+Matching 54 - 1-cycle non-special (idx 777)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-b1, a2-c2, a3-b2, b3-c1
+
+Matching 55 - 1-cycle non-special (idx 782)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-a3, b1-c2, b3-c1
+
+Matching 56 - 1-cycle non-special (idx 785)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-b1, a3-c2, b3-c1
+
+Matching 57 - 1-cycle non-special (idx 786)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-b3, a3-b1, c1-c2
+
+Matching 58 - 1-cycle non-special (idx 789)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-c1, a3-b1, b3-c2
+
+Matching 59 - 1-cycle non-special (idx 793)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-c2, a3-b3, b1-c1
+
+Matching 60 - 1-cycle non-special (idx 794)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b2, a2-c2, a3-c1, b1-b3
+
+Matching 61 - 1-cycle non-special (idx 796)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-a3, b1-c1, b2-c2
+
+Matching 62 - 1-cycle non-special (idx 799)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 2
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-b1, a3-c1, b2-c2
+
+Matching 63 - 1-cycle non-special (idx 801)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-b2, a3-b1, c1-c2
+
+Matching 64 - 1-cycle non-special (idx 805)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-c1, a3-b2, b1-c2
+
+Matching 65 - 1-cycle non-special (idx 806)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-c1, a3-c2, b1-b2
+
+Matching 66 - 1-cycle non-special (idx 807)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-b3, a2-c2, a3-b1, b2-c1
+
+Matching 67 - 1-cycle non-special (idx 814)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-c1, a2-b1, a3-b3, b2-c2
+
+Matching 68 - 1-cycle non-special (idx 816)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-c1, a2-b2, a3-b1, b3-c2
+
+Matching 69 - 1-cycle non-special (idx 822)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-c1, a2-c2, a3-b1, b2-b3
+
+Matching 70 - 1-cycle non-special (idx 828)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-c2, a2-b1, a3-b2, b3-c1
+
+Matching 71 - 1-cycle non-special (idx 834)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-c2, a2-b3, a3-b1, b2-c1
+
+Matching 72 - 1-cycle non-special (idx 837)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a1, t2-c3, t3-c2, a2-c1, a3-b1, b2-b3
+
+Matching 73 - 1-cycle non-special (idx 2010)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a3, t2-b2, t3-a2, a1-b1, b3-c1, c2-c3
+
+Matching 74 - 1-cycle non-special (idx 2116)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a3, t2-b3, t3-a2, a1-b1, b2-c2, c1-c3
+
+Matching 75 - 1-cycle non-special (idx 2221)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c1, t3-a2, a1-b1, b2-c2, b3-c3
+
+Matching 76 - 1-cycle non-special (idx 2327)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c2, t3-a2, a1-b1, b2-c3, b3-c1
+
+Matching 77 - 1-cycle non-special (idx 2430)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a3, t2-c3, t3-a2, a1-b1, b2-b3, c1-c2
+
+Matching 78 - 1-cycle non-special (idx 2431)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a3, t2-c3, t3-a2, a1-b1, b2-c1, b3-c2
+
+Matching 79 - 1-cycle non-special (idx 2435)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c3, t3-a2, a1-b2, b1-c2, b3-c1
+
+Matching 80 - 1-cycle non-special (idx 2437)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c3, t3-a2, a1-b3, b1-c1, b2-c2
+
+Matching 81 - 1-cycle non-special (idx 2440)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c3, t3-a2, a1-c1, b1-b3, b2-c2
+
+Matching 82 - 1-cycle non-special (idx 2442)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c3, t3-a2, a1-c2, b1-b2, b3-c1
+
+Matching 83 - 1-cycle non-special (idx 2465)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c3, t3-b2, a1-b1, a2-c2, b3-c1
+
+Matching 84 - 1-cycle non-special (idx 2479)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-a3, t2-c3, t3-b3, a1-b1, a2-c1, b2-c2
+
+Matching 85 - 1-cycle non-special (idx 2494)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a3, t2-c3, t3-c1, a1-b1, a2-b3, b2-c2
+
+Matching 86 - 1-cycle non-special (idx 2508)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-a3, t2-c3, t3-c2, a1-b1, a2-b2, b3-c1
+
+Matching 87 - 1-cycle non-special (idx 3061)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-b1, t2-c1, t3-a2, a1-a3, b2-c2, b3-c3
+
+Matching 88 - 1-cycle non-special (idx 3167)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-b1, t2-c2, t3-a2, a1-a3, b2-c3, b3-c1
+
+Matching 89 - 1-cycle non-special (idx 3275)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b1, t2-c3, t3-a2, a1-b2, a3-c2, b3-c1
+
+Matching 90 - 1-cycle non-special (idx 3277)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b1, t2-c3, t3-a2, a1-b3, a3-c1, b2-c2
+
+Matching 91 - 1-cycle non-special (idx 3280)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b1, t2-c3, t3-a2, a1-c1, a3-b3, b2-c2
+
+Matching 92 - 1-cycle non-special (idx 3282)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b1, t2-c3, t3-a2, a1-c2, a3-b2, b3-c1
+
+Matching 93 - 1-cycle non-special (idx 3305)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b1, t2-c3, t3-b2, a1-a3, a2-c2, b3-c1
+
+Matching 94 - 1-cycle non-special (idx 3319)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b1, t2-c3, t3-b3, a1-a3, a2-c1, b2-c2
+
+Matching 95 - 1-cycle non-special (idx 3596)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-a3, t3-a2, a1-c2, b1-c3, b3-c1
+
+Matching 96 - 1-cycle non-special (idx 3701)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-b2, t2-b1, t3-a2, a1-c2, a3-c3, b3-c1
+
+Matching 97 - 1-cycle non-special (idx 3804)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-b3, t3-a2, a1-c2, a3-b1, c1-c3
+
+Matching 98 - 1-cycle non-special (idx 3909)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-b2, t2-c1, t3-a2, a1-c2, a3-b1, b3-c3
+
+Matching 99 - 1-cycle non-special (idx 4112)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-c3, t3-a2, a1-a3, b1-c2, b3-c1
+
+Matching 100 - 1-cycle non-special (idx 4115)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b2, t2-c3, t3-a2, a1-b1, a3-c2, b3-c1
+
+Matching 101 - 1-cycle non-special (idx 4116)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-c3, t3-a2, a1-b3, a3-b1, c1-c2
+
+Matching 102 - 1-cycle non-special (idx 4119)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-c3, t3-a2, a1-c1, a3-b1, b3-c2
+
+Matching 103 - 1-cycle non-special (idx 4123)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-c3, t3-a2, a1-c2, a3-b3, b1-c1
+
+Matching 104 - 1-cycle non-special (idx 4124)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-c3, t3-a2, a1-c2, a3-c1, b1-b3
+
+Matching 105 - 1-cycle non-special (idx 4137)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b2, t2-c3, t3-a3, a1-c2, a2-b1, b3-c1
+
+Matching 106 - 1-cycle non-special (idx 4152)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-c3, t3-b1, a1-c2, a2-a3, b3-c1
+
+Matching 107 - 1-cycle non-special (idx 4169)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b2, t2-c3, t3-b3, a1-c2, a2-c1, a3-b1
+
+Matching 108 - 1-cycle non-special (idx 4184)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-c3, t3-c1, a1-c2, a2-b3, a3-b1
+
+Matching 109 - 1-cycle non-special (idx 4433)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-a3, t3-a2, a1-c1, b1-c3, b2-c2
+
+Matching 110 - 1-cycle non-special (idx 4538)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-b3, t2-b1, t3-a2, a1-c1, a3-c3, b2-c2
+
+Matching 111 - 1-cycle non-special (idx 4641)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-b2, t3-a2, a1-c1, a3-b1, c2-c3
+
+Matching 112 - 1-cycle non-special (idx 4854)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 2
+  RHS edges: t1-b3, t2-c2, t3-a2, a1-c1, a3-b1, b2-c3
+
+Matching 113 - 1-cycle non-special (idx 4951)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-c3, t3-a2, a1-a3, b1-c1, b2-c2
+
+Matching 114 - 1-cycle non-special (idx 4954)
+  Cycles in s1-t1: 2
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b3, t2-c3, t3-a2, a1-b1, a3-c1, b2-c2
+
+Matching 115 - 1-cycle non-special (idx 4956)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-c3, t3-a2, a1-b2, a3-b1, c1-c2
+
+Matching 116 - 1-cycle non-special (idx 4960)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-c3, t3-a2, a1-c1, a3-b2, b1-c2
+
+Matching 117 - 1-cycle non-special (idx 4961)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-c3, t3-a2, a1-c1, a3-c2, b1-b2
+
+Matching 118 - 1-cycle non-special (idx 4962)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-c3, t3-a2, a1-c2, a3-b1, b2-c1
+
+Matching 119 - 1-cycle non-special (idx 4974)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b3, t2-c3, t3-a3, a1-c1, a2-b1, b2-c2
+
+Matching 120 - 1-cycle non-special (idx 4989)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-c3, t3-b1, a1-c1, a2-a3, b2-c2
+
+Matching 121 - 1-cycle non-special (idx 5006)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 2
+  RHS edges: t1-b3, t2-c3, t3-b2, a1-c1, a2-c2, a3-b1
+
+Matching 122 - 1-cycle non-special (idx 5039)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-c3, t3-c2, a1-c1, a2-b2, a3-b1
+
+Matching 123 - 1-cycle non-special (idx 5378)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-c1, t2-b1, t3-a2, a1-b3, a3-c3, b2-c2
+
+Matching 124 - 1-cycle non-special (idx 5694)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c2, t3-a2, a1-b3, a3-b1, b2-c3
+
+Matching 125 - 1-cycle non-special (idx 5794)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c3, t3-a2, a1-b1, a3-b3, b2-c2
+
+Matching 126 - 1-cycle non-special (idx 5796)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c3, t3-a2, a1-b2, a3-b1, b3-c2
+
+Matching 127 - 1-cycle non-special (idx 5802)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c3, t3-a2, a1-c2, a3-b1, b2-b3
+
+Matching 128 - 1-cycle non-special (idx 5814)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c3, t3-a3, a1-b3, a2-b1, b2-c2
+
+Matching 129 - 1-cycle non-special (idx 5846)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c3, t3-b2, a1-b3, a2-c2, a3-b1
+
+Matching 130 - 1-cycle non-special (idx 6215)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-c2, t2-b1, t3-a2, a1-b2, a3-c3, b3-c1
+
+Matching 131 - 1-cycle non-special (idx 6531)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c1, t3-a2, a1-b2, a3-b1, b3-c3
+
+Matching 132 - 1-cycle non-special (idx 6633)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c3, t3-a2, a1-b1, a3-b2, b3-c1
+
+Matching 133 - 1-cycle non-special (idx 6639)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c3, t3-a2, a1-b3, a3-b1, b2-c1
+
+Matching 134 - 1-cycle non-special (idx 6642)
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c3, t3-a2, a1-c1, a3-b1, b2-b3
+
+Matching 135 - 1-cycle non-special (idx 6651)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c3, t3-a3, a1-b2, a2-b1, b3-c1
+
+Matching 136 - 1-cycle non-special (idx 6701)
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c3, t3-b3, a1-b2, a2-c1, a3-b1
+
+Matching 137 - 0-cycle special (idx 106)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-b2, b3-c2, c1-c3
+
+Matching 138 - 0-cycle special (idx 107)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-b2, b3-c3, c1-c2
+
+Matching 139 - 0-cycle special (idx 108)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-b3, b2-c1, c2-c3
+
+Matching 140 - 0-cycle special (idx 110)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-b3, b2-c3, c1-c2
+
+Matching 141 - 0-cycle special (idx 111)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-c1, b2-b3, c2-c3
+
+Matching 142 - 0-cycle special (idx 113)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-c1, b2-c3, b3-c2
+
+Matching 143 - 0-cycle special (idx 114)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-c2, b2-b3, c1-c3
+
+Matching 144 - 0-cycle special (idx 115)
+  Type: all t→a
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 1
+  Total cycles: 1
+  RHS edges: t1-a1, t2-a3, t3-a2, b1-c2, b2-c1, b3-c3
+
+Matching 145 - 0-cycle special (idx 2883)
+  Type: all t→b
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b1, t2-b2, t3-b3, a1-a3, a2-c1, c2-c3
+
+Matching 146 - 0-cycle special (idx 2989)
+  Type: all t→b
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b1, t2-b3, t3-b2, a1-a3, a2-c2, c1-c3
+
+Matching 147 - 0-cycle special (idx 3730)
+  Type: all t→b
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 3
+  RHS edges: t1-b2, t2-b1, t3-b3, a1-c2, a2-c1, a3-c3
+
+Matching 148 - 0-cycle special (idx 3834)
+  Type: all t→b
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b2, t2-b3, t3-b1, a1-c2, a2-a3, c1-c3
+
+Matching 149 - 0-cycle special (idx 4567)
+  Type: all t→b
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 1
+  Total cycles: 3
+  RHS edges: t1-b3, t2-b1, t3-b2, a1-c1, a2-c2, a3-c3
+
+Matching 150 - 0-cycle special (idx 4671)
+  Type: all t→b
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-b3, t2-b2, t3-b1, a1-c1, a2-a3, c2-c3
+
+Matching 151 - 0-cycle special (idx 5872)
+  Type: all t→c
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c3, t3-c2, a1-b1, a2-b2, a3-b3
+
+Matching 152 - 0-cycle special (idx 5878)
+  Type: all t→c
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c1, t2-c3, t3-c2, a1-b3, a2-b1, a3-b2
+
+Matching 153 - 0-cycle special (idx 6713)
+  Type: all t→c
+  Cycles in s1-t1: 1
+  Cycles in s2-t3: 0
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c3, t3-c1, a1-b1, a2-b3, a3-b2
+
+Matching 154 - 0-cycle special (idx 6715)
+  Type: all t→c
+  Cycles in s1-t1: 0
+  Cycles in s2-t3: 1
+  Cycles in s3-t2: 0
+  Total cycles: 1
+  RHS edges: t1-c2, t2-c3, t3-c1, a1-b2, a2-b1, a3-b3
+
