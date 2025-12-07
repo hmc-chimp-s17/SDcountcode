@@ -1,0 +1,90 @@
+================================================================
+Comparison: v7 (s1-t1 any cycles) vs v8 (s1-t1 exclusive cycles)
+================================================================
+
+VERSION OVERVIEW:
+-----------------
+
+v7: s1-t1 path with >=1 cycles (no restrictions on s2-t3 or s3-t2)
+v8: s1-t1 path with >=1 cycles AND s2-t3 with 0 cycles AND s3-t2 with 0 cycles
+
+Both versions:
+- Merge vertices: a1,a2,a3→a; b1,b2,b3→b; c1,c2,c3→c
+- Split a-c edges: each a-c edge becomes a-b and b-c
+- Exclude self-loops from cycle counting
+
+================================================================
+RESULTS COMPARISON:
+================================================================
+
+6J Configuration:
+-----------------
+v7 (s1-t1 any):              61 total (52 non-special + 9 special)
+v8 (s1-t1 exclusive):        43 total (39 non-special + 4 special)
+Difference:                  18 matchings (13 non-special + 5 special)
+
+PILLOW Configuration:
+---------------------
+v7 (s1-t1 any):              58 total (52 non-special + 6 special)
+v8 (s1-t1 exclusive):        44 total (40 non-special + 4 special)
+Difference:                  14 matchings (12 non-special + 2 special)
+
+================================================================
+KEY INSIGHTS:
+================================================================
+
+1. Exclusive s1-t1 cycles (v8) represent ~70% of all s1-t1 cycles (v7):
+   - 6J:    43/61 = 70.5%
+   - PILLOW: 44/58 = 75.9%
+
+2. About 25-30% of matchings with s1-t1 cycles ALSO have cycles in 
+   other paths (s2-t3 or s3-t2):
+   - 6J:    18/61 = 29.5%
+   - PILLOW: 14/58 = 24.1%
+
+3. For non-special matchings:
+   - 6J:    39/52 = 75.0% are exclusive to s1-t1
+   - PILLOW: 40/52 = 76.9% are exclusive to s1-t1
+
+4. For special matchings:
+   - 6J:    4/9 = 44.4% are exclusive to s1-t1
+   - PILLOW: 4/6 = 66.7% are exclusive to s1-t1
+
+5. Special matchings show higher overlap with other paths than
+   non-special matchings, particularly for 6J.
+
+================================================================
+OUTPUT DIRECTORIES:
+================================================================
+
+nlo_v7_results/6J/        nlo_v7_results/PILLOW/
+nlo_v8_results/6J/        nlo_v8_results/PILLOW/
+
+Each contains:
+- summary.txt: Text summary of all matchings
+- drawings/: PNG visualizations
+
+================================================================
+DRAWING STYLES:
+================================================================
+
+v7: LEFT=Complete (s1-t1 highlighted), RIGHT=Merged+split s1-t1 (green)
+v8: LEFT=Complete (s1-t1 highlighted), RIGHT=s1-t1 only (green)
+    v8 subtitle shows: "s2-t3: 0 cycles, s3-t2: 0 cycles"
+
+================================================================
+INTERPRETATION:
+================================================================
+
+v8 identifies matchings where cycles appear EXCLUSIVELY in the s1-t1 
+path after vertex merging and a-c splitting. This is a stricter subset
+of v7, filtering out cases where multiple paths have cycles.
+
+This could be important for physics applications where you want to 
+study contributions that affect only one specific path topology.
+
+The ~70-75% exclusivity rate suggests that most s1-t1 cycles are 
+independent of the other paths, but a significant minority (~25-30%) 
+occur in conjunction with cycles in s2-t3 or s3-t2.
+
+================================================================
